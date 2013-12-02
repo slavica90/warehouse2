@@ -21,7 +21,8 @@ class LoginForm extends CFormModel
 	public function rules()
 	{
 		return array(
-			// username and password are required
+			
+      // username and password are required
 			array('username, password', 'required'),
 			// rememberMe needs to be a boolean
 			array('rememberMe', 'boolean'),
@@ -46,12 +47,34 @@ class LoginForm extends CFormModel
 	 */
 	public function authenticate($attribute,$params)
 	{
-		if(!$this->hasErrors())
+      if(!$this->hasErrors())
 		{
+    
 			$this->_identity=new UserIdentity($this->username,$this->password);
-			if(!$this->_identity->authenticate())
-				$this->addError('password','Incorrect username or password.');
+			$this->_identity->authenticate();
+				    
+    switch($this->_identity->errorCode)
+    {
+        case UserIdentity::ERROR_NONE:
+            $duration=$this->rememberMe ? 3600*24*30 : 0; // 30 days
+            Yii::app()->user->login($this->_identity,$duration);
+            break;
+        case UserIdentity::ERROR_USERNAME_INVALID:
+            $this->addError('username','Username is incorrect.');
+            break;
+        default: // UserIdentity::ERROR_PASSWORD_INVALID
+            $this->addError('password','Password is incorrect.');
+            break;
+    }
+      
+
 		}
+//		if(!$this->hasErrors())
+//		{
+//			$this->_identity=new UserIdentity($this->username,$this->password);
+//			if(!$this->_identity->authenticate())
+//				$this->addError('password','Incorrect username or password.');
+//		}
 	}
 
 	/**
