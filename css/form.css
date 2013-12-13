@@ -38,6 +38,10 @@ div.form
 {
 }
 
+div .login_id
+{
+    margin-top: 15px;
+}
 div.form input,
 div.form textarea,
 div.form select

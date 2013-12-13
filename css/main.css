@@ -15,11 +15,24 @@ body
 	border: 1px solid #C9E0ED;
 }
 
+#first_page
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #000000;
+    margin-top: 90px;
+    width: 300px;
+}
+
 #header
 {
 	margin: 0;
 	padding: 0;
 	border-top: 3px solid #C9E0ED;
+}
+
+#header_first_page
+{
+    text-align: center;
 }
 
 #content

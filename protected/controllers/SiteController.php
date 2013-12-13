@@ -31,8 +31,32 @@ class SiteController extends Controller
 		// using the default layout 'protected/views/layouts/main.php'
 		$this->render('index');
 	}
+        
+       public function actionLoginfirstpage()
+	{
+                $this->layout = 'home';
+		$model=new LoginForm;
 
-	/**
+		// if it is ajax validation request
+		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
+
+		// collect user input data
+		if(isset($_POST['LoginForm']))
+		{
+			$model->attributes=$_POST['LoginForm'];
+			// validate user input and redirect to the previous page if valid
+			if($model->validate() && $model->login())
+				$this->redirect(Yii::app()->createUrl('/site/index'));
+		}
+		// display the login form
+		$this->render('loginpage',array('model'=>$model));
+	}
+
+        /**
 	 * This is the action to handle external exceptions.
 	 */
 	public function actionError()
