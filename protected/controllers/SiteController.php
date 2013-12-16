@@ -2,6 +2,30 @@
 
 class SiteController extends Controller
 {
+    public function filters()
+    {
+        return array(
+            'accessControl',
+        );
+    }
+        
+        public function accessRules()
+        {
+                return array(
+                        array('allow',
+                                'actions'=>array('index'),
+                                'users'=>array('@'),
+                        ),
+                        array('allow', 
+                                'actions'=>array('select','contact', 'login', 'logout'),
+                                'users'=>array('*'),
+                                
+                        ),
+                    array('deny',  // deny all users
+                                'users'=>array('*'),
+                        ),
+                );
+        }
 	/**
 	 * Declares class-based actions.
 	 */
@@ -21,6 +45,8 @@ class SiteController extends Controller
 		);
 	}
 
+        
+        
 	/**
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
@@ -32,30 +58,6 @@ class SiteController extends Controller
 		$this->render('index');
 	}
         
-       public function actionLoginfirstpage()
-	{
-                $this->layout = 'home';
-		$model=new LoginForm;
-
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
-
-		// collect user input data
-		if(isset($_POST['LoginForm']))
-		{
-			$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->createUrl('/site/index'));
-		}
-		// display the login form
-		$this->render('loginpage',array('model'=>$model));
-	}
-
         /**
 	 * This is the action to handle external exceptions.
 	 */
@@ -101,6 +103,7 @@ class SiteController extends Controller
 	 */
 	public function actionLogin()
 	{
+            $this->layout = 'home';
 		$model=new LoginForm;
 
 		// if it is ajax validation request
@@ -116,7 +119,7 @@ class SiteController extends Controller
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
+                            $this->redirect(Yii::app()->createUrl('/site/index'));
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));

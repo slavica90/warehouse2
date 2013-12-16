@@ -288,3 +288,134 @@ REQUEST_URI=/warehouse/
 in C:\wamp\www\warehouse\protected\views\site\loginpage.php (13)
 in C:\wamp\www\warehouse\protected\controllers\SiteController.php (37)
 in C:\wamp\www\warehouse\index.php (13)
+2013/12/16 14:06:27 [error] [php] Undefined index: r (C:\wamp\www\warehouse\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#1 C:\wamp\www\warehouse\index.php(13): CWebApplication->run()
+REQUEST_URI=/warehouse/
+in C:\wamp\www\warehouse\protected\components\RequireLogin.php (11)
+in C:\wamp\www\warehouse\index.php (13)
+2013/12/16 14:06:28 [error] [php] Undefined index: r (C:\wamp\www\warehouse\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#1 C:\wamp\www\warehouse\index.php(13): CWebApplication->run()
+REQUEST_URI=/warehouse/
+in C:\wamp\www\warehouse\protected\components\RequireLogin.php (11)
+in C:\wamp\www\warehouse\index.php (13)
+2013/12/16 14:06:40 [error] [php] Undefined index: r (C:\wamp\www\warehouse\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#1 C:\wamp\www\warehouse\index.php(13): CWebApplication->run()
+REQUEST_URI=/warehouse/
+in C:\wamp\www\warehouse\protected\components\RequireLogin.php (11)
+in C:\wamp\www\warehouse\index.php (13)
+2013/12/16 14:07:25 [error] [php] Undefined index: r (C:\wamp\www\warehouse\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#1 C:\wamp\www\warehouse\index.php(13): CWebApplication->run()
+REQUEST_URI=/warehouse/index.php
+in C:\wamp\www\warehouse\protected\components\RequireLogin.php (11)
+in C:\wamp\www\warehouse\index.php (13)
+2013/12/16 14:12:52 [error] [php] in_array() expects at least 2 parameters, 1 given (C:\wamp\www\warehouse\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(207): CWebApplication->raiseEvent()
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#2 C:\wamp\www\warehouse\index.php(13): CWebApplication->run()
+REQUEST_URI=/warehouse/index.php?r=site/login
+in C:\wamp\www\warehouse\protected\components\RequireLogin.php (11)
+in C:\wamp\www\warehouse\index.php (13)
+2013/12/16 14:54:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loginfirstpage".' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('loginfirstpage')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('loginfirstpage')
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/warehouse/index.php
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/login
+---
+2013/12/16 14:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loginfirstpage".' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('loginfirstpage')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('loginfirstpage')
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/warehouse/index.php
+HTTP_REFERER=http://localhost/warehouse/index.php
+---
+2013/12/16 15:32:54 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('logout')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/logout')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=site/logout
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2013/12/16 15:33:01 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('logout')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/logout')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=site/logout
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2013/12/16 15:55:27 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('logout')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/logout')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=site/logout
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2013/12/16 16:22:10 [error] [php] Undefined variable: dataProvider (C:\wamp\www\warehouse\protected\views\site\index.php:22)
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\warehouse\protected\controllers\SiteController.php(58): SiteController->render()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): SiteController->runAction()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): SiteController->filterAccessControl()
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\warehouse\index.php(13): CWebApplication->run()
+REQUEST_URI=/warehouse/index.php?r=site/index
+in C:\wamp\www\warehouse\protected\views\site\index.php (22)
+in C:\wamp\www\warehouse\protected\controllers\SiteController.php (58)
+in C:\wamp\www\warehouse\index.php (13)
