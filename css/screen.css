@@ -236,3 +236,19 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
 .clearfix:after, .container:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
 .clearfix, .container {display:block;}
 .clear {clear:both;}
+
+.title_category 
+{
+    text-align: center;
+}
+
+.categories
+{
+    width: 100%;
+}
+
+.single_category
+{
+    float: left;
+    border: 1px solid #000000;
+}
