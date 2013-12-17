@@ -32,7 +32,7 @@ class CategoryController extends Controller
 //				'users'=>array('@'),
 //			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('index','view','create','update'),
+				'actions'=>array('index','view','create','update', 'allproducts'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -169,5 +169,15 @@ class CategoryController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+        
+        public function actionAllproducts($id)
+	{
+            $model=Category::model()->findByPk($id);
+            $allproducts=$model->products;
+		$this->render('allproducts',array(
+			'model'=>$model,
+                    'allproducts'=>$allproducts,
+		));
 	}
 }

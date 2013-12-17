@@ -54,9 +54,10 @@ class SiteController extends Controller
 	public function actionIndex()
 	{
             $kategorii=Category::model()->findAll(); // Array od Category objekti   
-            
-		$this->render('index',array(
+            $model=new Category;
+            $this->render('index',array(
                     'kategorii'=>$kategorii,
+                    'model'=> $model,
       		));
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'

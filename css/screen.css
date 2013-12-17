@@ -252,3 +252,7 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
     float: left;
     border: 1px solid #000000;
 }
+.add_category 
+{
+    font-size: 16px;
+}
