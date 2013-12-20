@@ -92,9 +92,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'image_url'); ?>
-		<?php echo $form->textField($model,'image_url',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'image_url'); ?>
+		<?php echo $form->labelEx($model, 'image_url'); ?>
+                <?php echo $form->fileField($model, 'image_url'); ?>
+                <?php echo $form->error($model, 'image_url'); ?>
 	</div>
 
 	<div class="row">

@@ -67,24 +67,34 @@ class ProductController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Product']))
-		{
-      $idNaKategorii=$_POST['chbox'];
-			$model->attributes=$_POST['Product'];
-			if($model->save()) {
-        $idNewProduct=$model->id;
-        foreach ($idNaKategorii as $idNaKategorija){
-           $novZapis=new CategoryProduct; //kreirame nov zapis od tabelata CategoryProduct
-           $novZapis->product_id=$idNewProduct;
-           $novZapis->category_id=$idNaKategorija;
-           $novZapis->save();
-         }
+            if(isset($_POST['Product']))
+            {
+                    $model->attributes=$_POST['Product'];
+                    
+                    $fileImage=CUploadedFile::getInstance($model,'image_url');
+                    $path = 'images/upload/productphotos'.time().$fileImage;
+                    $model->image_url = $path;  
+                    
+                    $idNaKategorii=$_POST['chbox'];
+                    
+                    if($model->save()) 
+                    {
+                        $fileImage->saveAs($path);
+                        
+                        $idNewProduct=$model->id;
+                        foreach ($idNaKategorii as $idNaKategorija)
+                        {
+                        $novZapis=new CategoryProduct; //kreirame nov zapis od tabelata CategoryProduct
+                        $novZapis->product_id=$idNewProduct;
+                        $novZapis->category_id=$idNaKategorija;
+                        $novZapis->save();
+                        }
          
-				$this->redirect(array('view','id'=>$model->id));
-      }
-		}
+                        $this->redirect(array('view','id'=>$model->id));
+                    }
+            }
 
-		$this->render('create',array(
+            $this->render('create',array(
 			'model'=>$model,
 		));
 	}

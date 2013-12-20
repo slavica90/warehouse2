@@ -15,7 +15,10 @@ $this->menu=array(
 	array('label'=>'Manage Product', 'url'=>array('admin')),
 );
 ?>
-
+<div class="back_link">
+<?php echo CHtml::link('Врати се назад',Yii::app()->request->urlReferrer); ?>
+</div>
+<div class="product_details">
 <h1>View Product #<?php echo $model->id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
@@ -39,3 +42,9 @@ $this->menu=array(
 		'user_id',
 	),
 )); ?>
+</div>
+<div class="product_buttons">
+    <?php echo CHtml::link("Измени го продуктот",array('product/update',
+      'id'=>$model->id)); ?>
+       
+</div>

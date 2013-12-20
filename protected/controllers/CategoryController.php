@@ -66,12 +66,18 @@ class CategoryController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+                    $fileImage=CUploadedFile::getInstance($model,'image_url');
+                    $path = 'images/upload/categoryphotos'.time().$fileImage;
+                    $model->image_url = $path;
 		if(isset($_POST['Category']))
 		{
 			$model->attributes=$_POST['Category'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+                        {
+                             $fileImage->saveAs($path);
+                            
+                             $this->redirect(array('view','id'=>$model->id));
+                        }
 		}
 
 		$this->render('create',array(
