@@ -51,9 +51,9 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Мерка'); ?>
-                <?php echo $form->textField($model,'measurement',array('size'=>50,'maxlength'=>50)); ?>
+                <?php echo CHtml::dropDownList('measurement', $model->measurement, array('1' => 'l', '2' => 'br', '3' => 'm')); ?>
 		<?php echo $form->error($model,'measurement'); ?>
-	</div>
+       </div>
 
 	<div class="row">
                 <?php echo $form->labelEx($model,'Дата(излез)'); ?>
@@ -63,7 +63,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Дата(влез)'); ?>
-		<?php echo $form->textField($model,'date_in',array('id'=>'datepicker')); ?>
+		<?php echo $form->textField($model,'date_in',array('id'=>'datepicker1')); ?>
 		<?php echo $form->error($model,'date_in'); ?>
 	</div>
 
