@@ -9,27 +9,27 @@
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('name')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Име')); ?>:</b>
 	<?php echo CHtml::encode($data->name); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('code')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Код')); ?>:</b>
 	<?php echo CHtml::encode($data->code); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('purchase_price')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Набавна цена')); ?>:</b>
 	<?php echo CHtml::encode($data->purchase_price); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('sell_price')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Продажна цена')); ?>:</b>
 	<?php echo CHtml::encode($data->sell_price); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('amount')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Количина')); ?>:</b>
 	<?php echo CHtml::encode($data->amount); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('measurement')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Мерка')); ?>:</b>
 	<?php echo CHtml::encode($data->measurement); ?>
 	<br />
 

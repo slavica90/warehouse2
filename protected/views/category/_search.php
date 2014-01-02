@@ -17,12 +17,12 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'name'); ?>
+		<?php echo $form->label($model,'Име'); ?>
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'description'); ?>
+		<?php echo $form->label($model,'Опис'); ?>
 		<?php echo $form->textField($model,'description',array('size'=>50,'maxlength'=>50)); ?>
 	</div>
 
@@ -32,22 +32,22 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'date_create'); ?>
+		<?php echo $form->label($model,'Датум(креирање)'); ?>
 		<?php echo $form->textField($model,'date_create'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'date_update'); ?>
+		<?php echo $form->label($model,'Датум(ажурирање)'); ?>
 		<?php echo $form->textField($model,'date_update'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'user_id'); ?>
+		<?php echo $form->label($model,'Корисник_ID'); ?>
 		<?php echo $form->textField($model,'user_id',array('size'=>10,'maxlength'=>10)); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+		<?php echo CHtml::submitButton('Пребарај'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

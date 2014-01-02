@@ -121,4 +121,4 @@ class User extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-}
+ }

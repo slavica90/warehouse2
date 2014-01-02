@@ -66,15 +66,15 @@ class CategoryController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-                    $fileImage=CUploadedFile::getInstance($model,'image_url');
-                    $path = 'images/upload/categoryphotos'.time().$fileImage;
-                    $model->image_url = $path;
+                 //   $fileImage=CUploadedFile::getInstance($model,'image_url');
+                 //   $path = 'images/upload/categoryphotos'.time().$fileImage;
+                //    $model->image_url = $path;
 		if(isset($_POST['Category']))
 		{
 			$model->attributes=$_POST['Category'];
 			if($model->save())
                         {
-                             $fileImage->saveAs($path);
+                          //   $fileImage->saveAs($path);
                             
                              $this->redirect(array('view','id'=>$model->id));
                         }
@@ -83,6 +83,8 @@ class CategoryController extends Controller
 		$this->render('create',array(
 			'model'=>$model,
 		));
+                
+                Yii::app()->clientScript->registerCoreScript('jquery.ui');
 	}
 
 	/**
@@ -107,6 +109,8 @@ class CategoryController extends Controller
 		$this->render('update',array(
 			'model'=>$model,
 		));
+                
+                Yii::app()->clientScript->registerCoreScript('jquery.ui');
 	}
 
 	/**
@@ -186,4 +190,6 @@ class CategoryController extends Controller
                     'allproducts'=>$allproducts,
 		));
 	}
+        
+        
 }

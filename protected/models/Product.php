@@ -30,6 +30,17 @@ class Product extends CActiveRecord
 	{
 		return 'product';
 	}
+        
+        
+         public function beforeSave() {
+             if ($this->isNewRecord) {
+                $this->date_create = new CDbExpression('NOW()');
+                $this->user_id = Yii::app()->user->id;  
+             }
+            $this->date_update = new CDbExpression('NOW()');
+ 
+            return parent::beforeSave();
+        }
 
 	/**
 	 * @return array validation rules for model attributes.
@@ -39,13 +50,14 @@ class Product extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, code, purchase_price, sell_price, amount, measurement, instock, user_id', 'required'),
+			array('name, code, purchase_price, sell_price, amount, measurement, instock', 'required'),
 			array('purchase_price, sell_price, instock, user_id', 'numerical', 'integerOnly'=>true),
 			array('amount', 'numerical'),
 			array('name, image_url', 'length', 'max'=>255),
 			array('code, measurement, order_phone', 'length', 'max'=>50),
 			array('order_from', 'length', 'max'=>100),
 			array('date_create, date_update, date_out, date_in', 'safe'),
+                        array('user_id', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, name, code, purchase_price, sell_price, amount, measurement, date_create, date_update, date_out, date_in, order_from, order_phone, image_url, instock, user_id', 'safe', 'on'=>'search'),

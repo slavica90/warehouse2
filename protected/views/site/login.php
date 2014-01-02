@@ -9,7 +9,7 @@ $this->pageTitle=Yii::app()->name . ' - Login';
 //);
 ?>
 
-<h1>Login</h1>
+<h1>Најава</h1>
 
 <!--<p>Please fill out the following form with your login credentials:</p>-->
 
@@ -25,13 +25,13 @@ $this->pageTitle=Yii::app()->name . ' - Login';
 <!--	<p class="note">Fields with <span class="required">*</span> are required.</p>-->
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
+		<?php echo $form->labelEx($model,'Корисничко име'); ?>
 		<?php echo $form->textField($model,'username'); ?>
 		<?php echo $form->error($model,'username'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
+		<?php echo $form->labelEx($model,'Лозинка'); ?>
 		<?php echo $form->passwordField($model,'password'); ?>
 		<?php echo $form->error($model,'password'); ?>
 <!--		<p class="hint">
@@ -46,7 +46,7 @@ $this->pageTitle=Yii::app()->name . ' - Login';
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Login'); ?>
+		<?php echo CHtml::submitButton('Најави се'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

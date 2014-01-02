@@ -21,6 +21,19 @@ class Category extends CActiveRecord
 	{
 		return 'category';
 	}
+        
+        
+        public function beforeSave() {
+             if ($this->isNewRecord) {
+                $this->date_create = new CDbExpression('NOW()');
+                $this->user_id = Yii::app()->user->id; 
+            }
+ 
+            $this->date_update = new CDbExpression('NOW()');
+ 
+            return parent::beforeSave();
+        }
+
 
 	/**
 	 * @return array validation rules for model attributes.
@@ -30,11 +43,12 @@ class Category extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, description, user_id', 'required'),
+			array('name, description', 'required'),
 			array('name, image_url', 'length', 'max'=>255),
 			array('description', 'length', 'max'=>50),
 			array('user_id', 'length', 'max'=>10),
 			array('date_create, date_update', 'safe'),
+                        array('user_id', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, name, description, image_url, date_create, date_update, user_id', 'safe', 'on'=>'search'),

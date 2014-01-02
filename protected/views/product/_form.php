@@ -15,78 +15,66 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Полињата означени со<span class="required">*</span> се задолжителни.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'name'); ?>
+		<?php echo $form->labelEx($model,'Име'); ?>
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'name'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'code'); ?>
+		<?php echo $form->labelEx($model,'Код'); ?>
 		<?php echo $form->textField($model,'code',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'code'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'purchase_price'); ?>
+		<?php echo $form->labelEx($model,'Набавна цена'); ?>
 		<?php echo $form->textField($model,'purchase_price'); ?>
 		<?php echo $form->error($model,'purchase_price'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'sell_price'); ?>
+		<?php echo $form->labelEx($model,'Продажна цена'); ?>
 		<?php echo $form->textField($model,'sell_price'); ?>
 		<?php echo $form->error($model,'sell_price'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'amount'); ?>
+		<?php echo $form->labelEx($model,'Количина'); ?>
 		<?php echo $form->textField($model,'amount'); ?>
 		<?php echo $form->error($model,'amount'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'measurement'); ?>
-		<?php echo $form->textField($model,'measurement',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->labelEx($model,'Мерка'); ?>
+                <?php echo $form->textField($model,'measurement',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'measurement'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'date_create'); ?>
-		<?php echo $form->textField($model,'date_create'); ?>
-		<?php echo $form->error($model,'date_create'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'date_update'); ?>
-		<?php echo $form->textField($model,'date_update'); ?>
-		<?php echo $form->error($model,'date_update'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'date_out'); ?>
-		<?php echo $form->textField($model,'date_out'); ?>
+                <?php echo $form->labelEx($model,'Дата(излез)'); ?>
+                <?php echo $form->textField($model,'date_out',array('id'=>'datepicker')); ?>
 		<?php echo $form->error($model,'date_out'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'date_in'); ?>
-		<?php echo $form->textField($model,'date_in'); ?>
+		<?php echo $form->labelEx($model,'Дата(влез)'); ?>
+		<?php echo $form->textField($model,'date_in',array('id'=>'datepicker')); ?>
 		<?php echo $form->error($model,'date_in'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'order_from'); ?>
+		<?php echo $form->labelEx($model,'Нарачај од'); ?>
 		<?php echo $form->textField($model,'order_from',array('size'=>60,'maxlength'=>100)); ?>
 		<?php echo $form->error($model,'order_from'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'order_phone'); ?>
+		<?php echo $form->labelEx($model,'Телефон за нарачка'); ?>
 		<?php echo $form->textField($model,'order_phone',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'order_phone'); ?>
 	</div>
@@ -98,26 +86,20 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'instock'); ?>
+		<?php echo $form->labelEx($model,'На залиха'); ?>
 		<?php echo $form->textField($model,'instock'); ?>
 		<?php echo $form->error($model,'instock'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'user_id'); ?>
-		<?php echo $form->textField($model,'user_id'); ?>
-		<?php echo $form->error($model,'user_id'); ?>
-	</div>
-  
-  <div class="row">
-    <?php $categorylist=Category::model()->findAll(); ?>
-    <?php foreach($categorylist as $singlecategory){?>
-    <label>
-    <input type="checkbox" name="chbox[]" value="<?php echo $singlecategory->id ?>" class="checkbox_bookcreate" />
-    <?php echo $singlecategory->name; ?>
-    </label>
-    <?php } ?>
-  </div> 
+                <?php $categorylist=Category::model()->findAll(); ?>
+                <?php foreach($categorylist as $singlecategory){?>
+                <label>
+                    <input type="checkbox" name="chbox[]" value="<?php echo $singlecategory->id ?>" class="checkbox_bookcreate" />
+                     <?php echo $singlecategory->name; ?>
+                </label>
+                <?php } ?>
+        </div> 
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
@@ -125,4 +107,5 @@
 
 <?php $this->endWidget(); ?>
 
+             
 </div><!-- form -->

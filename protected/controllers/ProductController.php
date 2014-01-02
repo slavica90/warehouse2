@@ -71,15 +71,15 @@ class ProductController extends Controller
             {
                     $model->attributes=$_POST['Product'];
                     
-                    $fileImage=CUploadedFile::getInstance($model,'image_url');
-                    $path = 'images/upload/productphotos'.time().$fileImage;
-                    $model->image_url = $path;  
+                  //  $fileImage=CUploadedFile::getInstance($model,'image_url');
+                    //$path = 'images/upload/productphotos'.time().$fileImage;
+                   // $model->image_url = $path;  
                     
                     $idNaKategorii=$_POST['chbox'];
                     
                     if($model->save()) 
                     {
-                        $fileImage->saveAs($path);
+                      //  $fileImage->saveAs($path);
                         
                         $idNewProduct=$model->id;
                         foreach ($idNaKategorii as $idNaKategorija)
@@ -97,6 +97,7 @@ class ProductController extends Controller
             $this->render('create',array(
 			'model'=>$model,
 		));
+            Yii::app()->clientScript->registerCoreScript('jquery.ui');
 	}
 
 	/**
@@ -121,6 +122,8 @@ class ProductController extends Controller
 		$this->render('update',array(
 			'model'=>$model,
 		));
+                
+                Yii::app()->clientScript->registerCoreScript('jquery.ui');
 	}
 
 	/**
