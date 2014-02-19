@@ -50,7 +50,7 @@ class Product extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, code, purchase_price, sell_price, amount, instock', 'required'),
+			array('name, code, purchase_price, sell_price, amount, instock, image_url', 'required'),
 			array('purchase_price, sell_price, instock, user_id', 'numerical', 'integerOnly'=>true),
 			array('amount', 'numerical'),
 			array('name, image_url', 'length', 'max'=>255),
@@ -61,6 +61,8 @@ class Product extends CActiveRecord
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, name, code, purchase_price, sell_price, amount, measurement, date_create, date_update, date_out, date_in, order_from, order_phone, image_url, instock, user_id', 'safe', 'on'=>'search'),
+                        // za prikacuvanje na slika
+                        array('image_url', 'file', 'types'=>'jpg, jpeg, gif, png', 'allowEmpty'=>true),
 		);
 	}
 

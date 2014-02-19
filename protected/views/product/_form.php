@@ -51,7 +51,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Мерка'); ?>
-                <?php echo CHtml::dropDownList('measurement', $model->measurement, array('1' => 'l', '2' => 'br', '3' => 'm')); ?>
+                <?php echo CHtml::activeDropDownList( $model,'measurement', array('l' => 'l (litar)', 'br' => 'br (brojka)', 'm' => 'm (metar)')); ?>
 		<?php echo $form->error($model,'measurement'); ?>
        </div>
 
@@ -84,7 +84,8 @@
                 <?php echo $form->fileField($model, 'image_url'); ?>
                 <?php echo $form->error($model, 'image_url'); ?>
 	</div>
-
+        
+       
 	<div class="row">
 		<?php echo $form->labelEx($model,'На залиха'); ?>
 		<?php echo $form->textField($model,'instock'); ?>
