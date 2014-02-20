@@ -71,20 +71,29 @@ class ProductController extends Controller
             {
                     $model->attributes=$_POST['Product'];
                     
+                   
                     $fileImage=CUploadedFile::getInstance($model,'image_url');
-                    $path = Yii::getPathOfAlias('webroot').'/images/upload/productphotos/'.$fileImage;
-                    $model->image_url = $path;
-                    
-                    
+                     if(!is_null($fileImage)){
+                        $model->image_url = $fileImage;
+                   }
+                   
                     $idNaKategorii=$_POST['chbox'];
                     
                     if($model->save()) 
                     {
                        
-                    if(!empty($fileImage))  // check if uploaded file is set or not
-                    {
-                        $fileImage->saveAs($path);
-                    }    
+                   if(!empty($fileImage))  // check if uploaded file is set or not
+                        {
+                            $ds = DIRECTORY_SEPARATOR; // this is `/` or `\` in windows (wamp)
+                            $imgdir = dirname(Yii::app()->basePath).$ds.'images'.$ds.'upload'.$ds.'productphotos'.$ds.$model->id;           // path   to images
+                        if (!is_dir($imgdir)) {
+                            mkdir($imgdir, 0777); // if folder does not exists, than create it 
+                            }
+                            
+                            $filename = $imgdir.$ds.time().'_'.$model->id.'.'.$fileImage->getExtensionName();;
+                            $fileImage->saveAs($filename); 
+                         }
+                            
                         $idNewProduct=$model->id;
                         foreach ($idNaKategorii as $idNaKategorija)
                         {
@@ -118,24 +127,23 @@ class ProductController extends Controller
 
 		if(isset($_POST['Product']))
 		{
-                        $fileImage=CUploadedFile::getInstance($model,'image_url');
-                         if(!is_null($fileImage)){
-                    $model->image_url = $fileImage;
-                         }
+                   $fileImage=CUploadedFile::getInstance($model,'image_url');
+                   if(!is_null($fileImage)){
+                        $model->image_url = $fileImage;
+                   }
                                                   
-			$model->attributes=$_POST['Product'];
-                        if($model->save())
-                        {
-                            
+                    $model->attributes=$_POST['Product'];
+                    if($model->save())
+                    {
                         if(!empty($fileImage))  // check if uploaded file is set or not
                         {
-                        $ds = DIRECTORY_SEPARATOR; // this is `/` or `\` in windows (wamp)
-                        $imgdir = dirname(Yii::app()->basePath).$ds.'images';           // path   to images
+                            $ds = DIRECTORY_SEPARATOR; // this is `/` or `\` in windows (wamp)
+                            $imgdir = dirname(Yii::app()->basePath).$ds.'images'.$ds.'upload'.$ds.'productphotos'.$ds.$model->id;           // path   to images
                         if (!is_dir($imgdir)) {
                             mkdir($imgdir, 0777); // if folder does not exists, than create it 
                             }
                             
-                            $filename = $imgdir.$ds.$fileImage;
+                            $filename = $imgdir.$ds.time().'_'.$model->id.'.'.$fileImage->getExtensionName();;
                             $fileImage->saveAs($filename); 
                             }
                         }
