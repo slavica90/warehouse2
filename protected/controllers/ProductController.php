@@ -90,7 +90,7 @@ class ProductController extends Controller
                             mkdir($imgdir, 0777); // if folder does not exists, than create it 
                             }
                             
-                            $filename = $imgdir.$ds.time().'_'.$model->id.'.'.$fileImage->getExtensionName();;
+                            $filename = $imgdir.$ds.time().'_'.$model->id.'.'.$fileImage->getExtensionName();
                             $fileImage->saveAs($filename); 
                          }
                             
@@ -131,8 +131,10 @@ class ProductController extends Controller
                    if(!is_null($fileImage)){
                         $model->image_url = $fileImage;
                    }
-                                                  
+                   
+                    $idNaKategorii=$_POST['chbox'];                              
                     $model->attributes=$_POST['Product'];
+                    
                     if($model->save())
                     {
                         if(!empty($fileImage))  // check if uploaded file is set or not
@@ -143,16 +145,20 @@ class ProductController extends Controller
                             mkdir($imgdir, 0777); // if folder does not exists, than create it 
                             }
                             
-                            $filename = $imgdir.$ds.time().'_'.$model->id.'.'.$fileImage->getExtensionName();;
+                            $filename = $imgdir.$ds.time().'_'.$model->id.'.'.$fileImage->getExtensionName();
                             $fileImage->saveAs($filename); 
-                            }
+                         }
+                        $idProduct=$model->id;
+                        CategoryProduct::model()->deleteAll('product_id=:product_id', array(":product_id"=>$idProduct)); // se brisat site stavki od categoryProduct so product_id=id na konkretniot product
+                        foreach ($idNaKategorii as $idNaKategorija){
+                            $novZapis=new CategoryProduct; //kreirame nov zapis od tabelata CategoryProduct
+                            $novZapis->product_id=$idProduct;
+                            $novZapis->category_id=$idNaKategorija;
+                            $novZapis->save();
                         }
-                              
-                      $this->redirect(array('view','id'=>$model->id));
-                  }
-				
-		
-
+                         $this->redirect(array('view','id'=>$model->id));
+                      }
+                    }
 		$this->render('update',array(
 			'model'=>$model,
 		));

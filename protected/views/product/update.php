@@ -18,4 +18,4 @@ $this->menu=array(
 
 <h1>Ажурирај Продукт <?php echo $model->id; ?></h1>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php $this->renderPartial('_form_update', array('model'=>$model)); ?>
