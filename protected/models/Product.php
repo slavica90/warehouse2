@@ -36,7 +36,7 @@ class Product extends CActiveRecord
              if ($this->isNewRecord) {
                 $this->date_create = new CDbExpression('NOW()');
                 $this->user_id = Yii::app()->user->id;
-                $this->image_url = 
+                
              }
             $this->date_update = new CDbExpression('NOW()');
  
