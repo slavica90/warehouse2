@@ -141,7 +141,7 @@ class ProductController extends Controller
                         {
                             $ds = DIRECTORY_SEPARATOR; // this is `/` or `\` in windows (wamp)
                             $imgdir = dirname(Yii::app()->basePath).$ds.'images'.$ds.'upload'.$ds.'productphotos'.$ds.$model->id;           // path   to images
-                        if (!is_dir($imgdir)) {
+                            if (!is_dir($imgdir)) {
                             mkdir($imgdir, 0777); // if folder does not exists, than create it 
                             }
                             

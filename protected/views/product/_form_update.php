@@ -69,15 +69,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Нарачај од'); ?>
-		<?php echo $form->textField($model,'order_from',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'order_from'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'Телефон за нарачка'); ?>
-		<?php echo $form->textField($model,'order_phone',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'order_phone'); ?>
+		<?php echo $form->labelEx($model,'Фирма за нарачка'); ?>
+		<?php echo $form->textField($model,'firma_id'); ?>
+		<?php echo $form->error($model,'firma_id'); ?>
 	</div>
 
 	<div class="row">

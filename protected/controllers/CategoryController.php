@@ -72,10 +72,26 @@ class CategoryController extends Controller
 		if(isset($_POST['Category']))
 		{
 			$model->attributes=$_POST['Category'];
+                        
+                        $fileImage=CUploadedFile::getInstance($model,'image_url');
+                        if(!is_null($fileImage)){
+                            $model->image_url = $fileImage;
+                        }
+                   
 			if($model->save())
                         {
-                          //   $fileImage->saveAs($path);
+                          
+                            if(!empty($fileImage))  // check if uploaded file is set or not
+                            {
+                                $ds = DIRECTORY_SEPARATOR; // this is `/` or `\` in windows (wamp)
+                                $imgdir = dirname(Yii::app()->basePath).$ds.'images'.$ds.'upload'.$ds.'categoryphotos'.$ds.$model->id;           // path   to images
+                                if (!is_dir($imgdir)) {
+                                    mkdir($imgdir, 0777); // if folder does not exists, than create it 
+                                }
                             
+                                $filename = $imgdir.$ds.time().'_'.$model->id.'.'.$fileImage->getExtensionName();
+                                $fileImage->saveAs($filename); 
+                            }
                              $this->redirect(array('view','id'=>$model->id));
                         }
 		}
@@ -101,9 +117,27 @@ class CategoryController extends Controller
 
 		if(isset($_POST['Category']))
 		{
-			$model->attributes=$_POST['Category'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+                    $fileImage=CUploadedFile::getInstance($model,'image_url');
+                    if(!is_null($fileImage)){
+                        $model->image_url = $fileImage;
+                    }
+                   
+                    $model->attributes=$_POST['Category'];
+                    if($model->save()){
+                        if(!empty($fileImage))  // check if uploaded file is set or not
+                        {
+                            $ds = DIRECTORY_SEPARATOR; // this is `/` or `\` in windows (wamp)
+                            $imgdir = dirname(Yii::app()->basePath).$ds.'images'.$ds.'upload'.$ds.'categoryphotos'.$ds.$model->id;           // path   to images
+                            if (!is_dir($imgdir)) {
+                            mkdir($imgdir, 0777); // if folder does not exists, than create it 
+                            }
+                            
+                            $filename = $imgdir.$ds.time().'_'.$model->id.'.'.$fileImage->getExtensionName();
+                            $fileImage->saveAs($filename); 
+                         }
+                         $this->redirect(array('view','id'=>$model->id));
+                    }
+			
 		}
 
 		$this->render('update',array(

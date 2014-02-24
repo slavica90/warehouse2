@@ -15,8 +15,7 @@
  * @property string $date_update
  * @property string $date_out
  * @property string $date_in
- * @property string $order_from
- * @property string $order_phone
+ * @property string $firma_id
  * @property string $image_url
  * @property integer $instock
  * @property integer $user_id
@@ -51,17 +50,16 @@ class Product extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, code, purchase_price, sell_price, amount, instock, image_url', 'required'),
-			array('purchase_price, sell_price, instock, user_id', 'numerical', 'integerOnly'=>true),
+			array('name, code, purchase_price, sell_price, amount, instock, image_url, firma_id', 'required'),
+			array('purchase_price, sell_price, instock, user_id, firma_id', 'numerical', 'integerOnly'=>true),
 			array('amount', 'numerical'),
 			array('name, image_url', 'length', 'max'=>255),
-			array('code, measurement, order_phone', 'length', 'max'=>50),
-			array('order_from', 'length', 'max'=>100),
+			array('code, measurement', 'length', 'max'=>50),
 			array('date_create, date_update, date_out, date_in', 'safe'),
                         array('user_id', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, code, purchase_price, sell_price, amount, measurement, date_create, date_update, date_out, date_in, order_from, order_phone, image_url, instock, user_id', 'safe', 'on'=>'search'),
+			array('id, name, code, purchase_price, sell_price, amount, measurement, date_create, date_update, date_out, date_in, image_url, instock, user_id, firma_id', 'safe', 'on'=>'search'),
                         // za prikacuvanje na slika
                         array('image_url', 'file', 'types'=>'jpg, jpeg, gif, png', 'allowEmpty'=>true),
 		);
@@ -98,8 +96,7 @@ class Product extends CActiveRecord
 			'date_update' => 'Date Update',
 			'date_out' => 'Date Out',
 			'date_in' => 'Date In',
-			'order_from' => 'Order From',
-			'order_phone' => 'Order Phone',
+			'firma_id' => 'Firma',
 			'image_url' => 'Image Url',
 			'instock' => 'Instock',
 			'user_id' => 'User',
@@ -135,8 +132,7 @@ class Product extends CActiveRecord
 		$criteria->compare('date_update',$this->date_update,true);
 		$criteria->compare('date_out',$this->date_out,true);
 		$criteria->compare('date_in',$this->date_in,true);
-		$criteria->compare('order_from',$this->order_from,true);
-		$criteria->compare('order_phone',$this->order_phone,true);
+		$criteria->compare('firma_id',$this->firma_id,true);
 		$criteria->compare('image_url',$this->image_url,true);
 		$criteria->compare('instock',$this->instock);
 		$criteria->compare('user_id',$this->user_id);

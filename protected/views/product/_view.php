@@ -50,12 +50,8 @@
 	<?php echo CHtml::encode($data->date_in); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('order_from')); ?>:</b>
-	<?php echo CHtml::encode($data->order_from); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('order_phone')); ?>:</b>
-	<?php echo CHtml::encode($data->order_phone); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('firma_id')); ?>:</b>
+	<?php echo CHtml::encode($data->firma_id); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('image_url')); ?>:</b>

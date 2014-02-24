@@ -1,39 +1,25 @@
 <?php
 
 /**
- * This is the model class for table "category".
+ * This is the model class for table "firma".
  *
- * The followings are the available columns in table 'category':
+ * The followings are the available columns in table 'firma':
  * @property string $id
  * @property string $name
- * @property string $description
- * @property string $image_url
- * @property string $date_create
- * @property string $date_update
- * @property string $user_id
+ * @property string $address
+ * @property string $phone_number
+ * @property double $lat
+ * @property double $lng
  */
-class Category extends CActiveRecord
+class Firma extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'category';
+		return 'firma';
 	}
-        
-        
-        public function beforeSave() {
-             if ($this->isNewRecord) {
-                $this->date_create = new CDbExpression('NOW()');
-                $this->user_id = Yii::app()->user->id; 
-            }
- 
-            $this->date_update = new CDbExpression('NOW()');
- 
-            return parent::beforeSave();
-        }
-
 
 	/**
 	 * @return array validation rules for model attributes.
@@ -43,17 +29,13 @@ class Category extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, description, image_url', 'required'),
-			array('name, image_url', 'length', 'max'=>255),
-			array('description', 'length', 'max'=>50),
-			array('user_id', 'length', 'max'=>10),
-			array('date_create, date_update', 'safe'),
-                        array('user_id', 'numerical', 'integerOnly'=>true),
+			array('name, address, phone_number', 'required'),
+			array('lat, lng', 'numerical'),
+			array('name, address', 'length', 'max'=>255),
+			array('phone_number', 'length', 'max'=>40),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, description, image_url, date_create, date_update, user_id', 'safe', 'on'=>'search'),
-                        // za prikacuvanje na slika
-                        array('image_url', 'file', 'types'=>'jpg, jpeg, gif, png', 'allowEmpty'=>true),
+			array('id, name, address, phone_number, lat, lng', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,10 +47,6 @@ class Category extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-      'categoryProducts' => array(self::HAS_MANY, 'CategoryProduct', 'category_id'),
-      
-      'products'=>array(self::MANY_MANY, 'Product',
-                'category_product(category_id, product_id)'), 
 		);
 	}
 
@@ -80,11 +58,10 @@ class Category extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'name' => 'Name',
-			'description' => 'Description',
-			'image_url' => 'Image Url',
-			'date_create' => 'Date Create',
-			'date_update' => 'Date Update',
-			'user_id' => 'User',
+			'address' => 'Address',
+			'phone_number' => 'Phone Number',
+			'lat' => 'Lat',
+			'lng' => 'Lng',
 		);
 	}
 
@@ -108,11 +85,10 @@ class Category extends CActiveRecord
 
 		$criteria->compare('id',$this->id,true);
 		$criteria->compare('name',$this->name,true);
-		$criteria->compare('description',$this->description,true);
-		$criteria->compare('image_url',$this->image_url,true);
-		$criteria->compare('date_create',$this->date_create,true);
-		$criteria->compare('date_update',$this->date_update,true);
-		$criteria->compare('user_id',$this->user_id,true);
+		$criteria->compare('address',$this->address,true);
+		$criteria->compare('phone_number',$this->phone_number,true);
+		$criteria->compare('lat',$this->lat);
+		$criteria->compare('lng',$this->lng);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -123,7 +99,7 @@ class Category extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Category the static model class
+	 * @return Firma the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
