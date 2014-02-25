@@ -1,24 +1,23 @@
 <?php
 
 /**
- * This is the model class for table "firma".
+ * This is the model class for table "sale".
  *
- * The followings are the available columns in table 'firma':
+ * The followings are the available columns in table 'sale':
  * @property string $id
- * @property string $name
- * @property string $address
- * @property string $phone_number
- * @property double $lat
- * @property double $lng
+ * @property string $date_create
+ * @property integer $sold_products
+ * @property string $comment
+ * @property integer $product_id
  */
-class Firma extends CActiveRecord
+class Sale extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'firma';
+		return 'sale';
 	}
 
 	/**
@@ -29,13 +28,12 @@ class Firma extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, address, phone_number', 'required'),
-			array('lat, lng', 'numerical'),
-			array('name, address', 'length', 'max'=>255),
-			array('phone_number', 'length', 'max'=>40),
+			array('date_create, sold_products, product_id', 'required'),
+			array('sold_products, product_id', 'numerical', 'integerOnly'=>true),
+			array('comment', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, address, phone_number, lat, lng', 'safe', 'on'=>'search'),
+			array('id, date_create, sold_products, comment, product_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -47,8 +45,8 @@ class Firma extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-                    'supplies' => array(self::HAS_MANY, 'Supply', 'firm_id'),
-		);
+                    'product' => array(self::BELONGS_TO, 'Product', 'product_id'),
+                );
 	}
 
 	/**
@@ -58,11 +56,10 @@ class Firma extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'address' => 'Address',
-			'phone_number' => 'Phone Number',
-			'lat' => 'Lat',
-			'lng' => 'Lng',
+			'date_create' => 'Date Create',
+			'sold_products' => 'Sold Products',
+			'comment' => 'Comment',
+			'product_id' => 'Product',
 		);
 	}
 
@@ -85,11 +82,10 @@ class Firma extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id,true);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('address',$this->address,true);
-		$criteria->compare('phone_number',$this->phone_number,true);
-		$criteria->compare('lat',$this->lat);
-		$criteria->compare('lng',$this->lng);
+		$criteria->compare('date_create',$this->date_create,true);
+		$criteria->compare('sold_products',$this->sold_products);
+		$criteria->compare('comment',$this->comment,true);
+		$criteria->compare('product_id',$this->product_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -100,7 +96,7 @@ class Firma extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Firma the static model class
+	 * @return Sale the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

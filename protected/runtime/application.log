@@ -2221,3 +2221,26 @@ HTTP_REFERER=http://localhost/warehouse/index.php?r=product/view&id=13
 2014/02/24 14:39:03 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
 in C:\wamp\www\warehouse\protected\controllers\ProductController.php (136)
 in C:\wamp\www\warehouse\index.php (13)
+2014/02/25 14:23:14 [warning] [application] Failed to set unsafe attribute "image_url" of "Category".
+in C:\wamp\www\warehouse\protected\controllers\CategoryController.php (125)
+in C:\wamp\www\warehouse\index.php (13)
+2014/02/25 14:41:25 [warning] [application] Failed to set unsafe attribute "image_url" of "Category".
+in C:\wamp\www\warehouse\protected\controllers\CategoryController.php (125)
+in C:\wamp\www\warehouse\index.php (13)
+2014/02/25 14:43:25 [warning] [application] Failed to set unsafe attribute "image_url" of "Category".
+in C:\wamp\www\warehouse\protected\controllers\CategoryController.php (125)
+in C:\wamp\www\warehouse\index.php (13)
+2014/02/25 14:45:13 [warning] [application] Failed to set unsafe attribute "image_url" of "Category".
+in C:\wamp\www\warehouse\protected\controllers\CategoryController.php (125)
+in C:\wamp\www\warehouse\index.php (13)
+2014/02/25 14:45:47 [warning] [application] Failed to set unsafe attribute "image_url" of "Category".
+in C:\wamp\www\warehouse\protected\controllers\CategoryController.php (125)
+in C:\wamp\www\warehouse\index.php (13)
+2014/02/25 15:39:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "гии".' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('??????')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/warehouse/index.php?r=%D0%B3%D0%B8%D0%B8
+---

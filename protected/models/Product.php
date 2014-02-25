@@ -74,6 +74,8 @@ class Product extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
       'productCategory' => array(self::HAS_MANY, 'CategoryProduct', 'product_id'),
+      'sales' => array(self::HAS_MANY, 'Sale', 'product_id'),
+      'supplies' => array(self::HAS_MANY, 'Supply', 'product_id'),
       'categories'=>array(self::MANY_MANY, 'Category',
                 'category_product(product_id, category_id)'),
 		);
