@@ -43,12 +43,14 @@
 		<?php echo $form->error($model,'product_id'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'firma_id'); ?>
-		<?php echo $form->textField($model,'firma_id'); ?>
+        <div class="row">
+		<?php echo $form->labelEx($model,'Фирма за набавка'); ?>
+                <?php 
+                $allcompanies=CHtml::listData(Firma::model()->findAll(), 'id', 'name');
+                echo CHtml::activeDropDownList( $model,'firma_id', $allcompanies,array('empty'=>'Изберете фирма за нарачка')); ; ?>
 		<?php echo $form->error($model,'firma_id'); ?>
-	</div>
-
+       </div>
+        
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

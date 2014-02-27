@@ -21,6 +21,13 @@ class Supply extends CActiveRecord
 		return 'supply';
 	}
 
+        public function beforeSave() {
+             if ($this->isNewRecord) {
+                $this->date_create = new CDbExpression('NOW()');
+             }
+            return parent::beforeSave();
+        }
+        
 	/**
 	 * @return array validation rules for model attributes.
 	 */

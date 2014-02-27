@@ -43,6 +43,10 @@ $this->menu=array(
 )); ?>
 </div>
 <div class="product_buttons">
+    <?php echo CHtml::link("Продажба на продукт",array('sale/create',
+      'p_id'=>$model->id)); ?>
+    <?php echo CHtml::link("Набавка на продукт",array('supply/create',
+      'p_id'=>$model->id)); ?>
     <?php echo CHtml::link("Измени го продуктот",array('product/update',
       'id'=>$model->id)); ?>
        

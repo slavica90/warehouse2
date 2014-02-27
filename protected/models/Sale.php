@@ -20,6 +20,13 @@ class Sale extends CActiveRecord
 		return 'sale';
 	}
 
+         public function beforeSave() {
+             if ($this->isNewRecord) {
+                $this->date_create = new CDbExpression('NOW()');
+             }
+            return parent::beforeSave();
+        }
+        
 	/**
 	 * @return array validation rules for model attributes.
 	 */

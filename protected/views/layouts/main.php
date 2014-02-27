@@ -46,6 +46,7 @@
 //				array('label'=>'Contact', 'url'=>array('/site/contact')),
                 array('label'=>'Категории', 'url'=>array('/category/index')),
                 array('label'=>'Продукти', 'url'=>array('/product/index')),
+                array('label'=>'Фирми', 'url'=>array('/firma/index')),
                 array('label'=>'Корисници', 'url'=>array('/user/index')),
 				array('label'=>'Најави се', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Одјави се ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
