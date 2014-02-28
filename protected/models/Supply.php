@@ -36,7 +36,7 @@ class Supply extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('date_create, bought_products, product_id, firma_id', 'required'),
+			array('bought_products, firma_id', 'required'),
 			array('bought_products, product_id, firma_id', 'numerical', 'integerOnly'=>true),
 			array('comment', 'safe'),
 			// The following rule is used by search().

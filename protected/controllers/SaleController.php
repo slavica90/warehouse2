@@ -66,16 +66,28 @@ class SaleController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
+                
+                   if(isset($_GET['p_id']))
+                {
+                    $pr_id=$_GET['p_id'];
+                    $product = Product::model()->findByPk($pr_id);
+                    $product->amount = $product->amount-$model->sold_products;
+                    $product->save() ;
+                }
+                 else 
+                {      
+                    $this->redirect(array('site/index'));   
+                }
 
 		if(isset($_POST['Sale']))
 		{
 			$model->attributes=$_POST['Sale'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('product/view','id'=>$pr_id));
 		}
 
 		$this->render('create',array(
-			'model'=>$model,
+			'model'=>$model, 'pr_id'=>$pr_id,
 		));
 	}
 
@@ -90,16 +102,24 @@ class SaleController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Sale']))
+                if(isset($_GET['p_id']))
+                {
+                    $pr_id=$_GET['p_id'];
+                }
+                 else 
+                {      
+                    $this->redirect(array('site/index'));   
+                }
+		
+                if(isset($_POST['Sale']))
 		{
 			$model->attributes=$_POST['Sale'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('product/view','id'=>$pr_id));
 		}
 
 		$this->render('update',array(
-			'model'=>$model,
+			'model'=>$model,'pr_id'=>$pr_id,
 		));
 	}
 

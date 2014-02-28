@@ -20,12 +20,6 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'date_create'); ?>
-		<?php echo $form->textField($model,'date_create'); ?>
-		<?php echo $form->error($model,'date_create'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'bought_products'); ?>
 		<?php echo $form->textField($model,'bought_products'); ?>
 		<?php echo $form->error($model,'bought_products'); ?>
@@ -38,8 +32,7 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'product_id'); ?>
-		<?php echo $form->textField($model,'product_id'); ?>
+		<?php echo $form->hiddenField($model,'product_id', array('value'=>$pr_id)); ?>
 		<?php echo $form->error($model,'product_id'); ?>
 	</div>
 

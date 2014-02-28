@@ -35,7 +35,7 @@ class Sale extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('date_create, sold_products, product_id', 'required'),
+			array('sold_products', 'required'),
 			array('sold_products, product_id', 'numerical', 'integerOnly'=>true),
 			array('comment', 'safe'),
 			// The following rule is used by search().

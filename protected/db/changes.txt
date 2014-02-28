@@ -6,3 +6,10 @@ ALTER TABLE `warehouse`.`category`     CHANGE `name` `name` VARCHAR(255) CHARACT
 ALTER TABLE `warehouse`.`product`     CHANGE `name` `name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,     CHANGE `code` `code` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,     CHANGE `measurement` `measurement` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,     CHANGE `order_from` `order_from` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL ,     CHANGE `order_phone` `order_phone` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL ,     CHANGE `image_url` `image_url` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL ;
 
 ALTER TABLE `warehouse`.`user`     CHANGE `firstname` `firstname` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,     CHANGE `email` `email` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,     CHANGE `username` `username` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,     CHANGE `password` `password` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+
+=========================== Promeni 28.02.2014 =================================
+
+ALTER TABLE `warehouse`.`sale`     CHANGE `date_create` `date_create` DATETIME NULL ;
+ALTER TABLE `warehouse`.`supply`     CHANGE `date_create` `date_create` DATETIME NULL ;
+ALTER TABLE `warehouse`.`supply`     CHANGE `product_id` `product_id` INT(11) NULL ;
+ALTER TABLE `warehouse`.`sale`     CHANGE `product_id` `product_id` INT(11) NULL ;

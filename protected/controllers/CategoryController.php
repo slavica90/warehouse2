@@ -218,6 +218,7 @@ class CategoryController extends Controller
         public function actionAllproducts($id)
 	{
             $model=Category::model()->findByPk($id);
+            $category_id=$_GET['id'];
             $allproducts=$model->products;
 		$this->render('allproducts',array(
 			'model'=>$model,
