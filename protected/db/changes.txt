@@ -13,3 +13,7 @@ ALTER TABLE `warehouse`.`sale`     CHANGE `date_create` `date_create` DATETIME N
 ALTER TABLE `warehouse`.`supply`     CHANGE `date_create` `date_create` DATETIME NULL ;
 ALTER TABLE `warehouse`.`supply`     CHANGE `product_id` `product_id` INT(11) NULL ;
 ALTER TABLE `warehouse`.`sale`     CHANGE `product_id` `product_id` INT(11) NULL ;
+
+=========================== Promeni 03.03.2014 =================================
+ALTER TABLE `warehouse`.`sale`     CHANGE `sold_products` `sold_products` FLOAT(11) NOT NULL;
+ALTER TABLE `warehouse`.`supply`     CHANGE `bought_products` `bought_products` FLOAT(11) NOT NULL;

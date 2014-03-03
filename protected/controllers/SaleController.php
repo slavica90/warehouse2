@@ -66,25 +66,32 @@ class SaleController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-                
-                   if(isset($_GET['p_id']))
+                if(isset($_GET['p_id']))
                 {
-                    $pr_id=$_GET['p_id'];
-                    $product = Product::model()->findByPk($pr_id);
-                    $product->amount = $product->amount-$model->sold_products;
-                    $product->save() ;
-                }
-                 else 
+                        $pr_id=$_GET['p_id'];
+                        if(isset($_POST['Sale']))
+                        {
+                            $model->attributes=$_POST['Sale'];
+                            $product = Product::model()->findByPk($pr_id);
+                            $sold=(float) $model->sold_products;
+                            $total=(float) $product->amount;
+                            if($sold <= $total){
+                                $result = $total-$sold;
+                                $product->amount = (string)$result;
+                                $product->save() ;
+                                if($model->save()) 
+                                    $this->redirect(array('product/view','id'=>$pr_id));
+                            }
+                            else
+                            {
+                                 $model->addError('sold_products', 'Нема доволно продукти во магацин. '
+                                         . 'На залиха имате само уште: '.$product->amount. ' продукти'); 
+                            }
+                        }
+		}else 
                 {      
                     $this->redirect(array('site/index'));   
                 }
-
-		if(isset($_POST['Sale']))
-		{
-			$model->attributes=$_POST['Sale'];
-			if($model->save())
-				$this->redirect(array('product/view','id'=>$pr_id));
-		}
 
 		$this->render('create',array(
 			'model'=>$model, 'pr_id'=>$pr_id,

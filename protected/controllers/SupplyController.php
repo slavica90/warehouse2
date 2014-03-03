@@ -63,25 +63,31 @@ class SupplyController extends Controller
 	public function actionCreate()
 	{
 		$model=new Supply;
-                if(isset($_GET['p_id']))
-                {
-                    $pr_id=$_GET['p_id'];
-                }
-                 else 
-                {      
-                    $this->redirect(array('site/index'));   
-                }
+       
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Supply']))
-		{
-			$model->attributes=$_POST['Supply'];
-			if($model->save())
-				$this->redirect(array('product/view','id'=>$pr_id));
-		}
-
-		$this->render('create',array(
+                 if(isset($_GET['p_id']))
+                {
+                        $pr_id=$_GET['p_id'];
+                        if(isset($_POST['Supply']))
+                        {
+                            $model->attributes=$_POST['Supply'];
+                            $product = Product::model()->findByPk($pr_id);
+                            $bought=(float) $model->bought_products;
+                            $total=(float) $product->amount;
+                            $result = $total+$bought;
+                            $product->amount = (string)$result;
+                            $product->save() ;
+                            if($model->save()) 
+                                 $this->redirect(array('product/view','id'=>$pr_id));
+                         }
+		}else 
+                {      
+                    $this->redirect(array('site/index'));   
+                }
+                
+                $this->render('create',array(
 			'model'=>$model,'pr_id'=>$pr_id,
 		));
 	}

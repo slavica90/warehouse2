@@ -36,7 +36,8 @@ class Sale extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('sold_products', 'required'),
-			array('sold_products, product_id', 'numerical', 'integerOnly'=>true),
+			array('product_id', 'numerical', 'integerOnly'=>true),
+                        array('sold_products', 'numerical'),
 			array('comment', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
