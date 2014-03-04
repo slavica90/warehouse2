@@ -1,3 +1,10 @@
+  <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+  </script>
 <?php
 /* @var $this ProductController */
 /* @var $model Product */
@@ -51,3 +58,49 @@ $this->menu=array(
       'id'=>$model->id)); ?>
        
 </div>
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Продажба</a></li>
+    <li><a href="#tabs-2">Набавка</a></li>
+  </ul>
+  <div id="tabs-1">
+    <div>
+       
+    <?php if($sales != NULL) {?>
+
+    <?php foreach ($sales as $sale){?>
+            <div>
+            <p> saleID: <?php echo $sale->id;?></p>
+            <p> Date Create: <?php echo $sale->date_create;?></p>
+            <p> Sold Products: <?php echo $sale->sold_products;?></p>
+            <p> Note: <?php echo $sale->comment;?></p>
+            <p> ProductID: <?php echo $sale->product_id;?></p>
+            <hr>
+        </div>
+    <?php } ?>
+    <?php }else {?>
+        <div class="flash-notice">Нема продажби за овој продукт!</div>
+     <?php } ?>
+    </div>
+  </div>
+  <div id="tabs-2">
+    <div>
+    <?php if($supplies != NULL) {?>
+
+    <?php foreach ($supplies as $supply){?>
+            <div>
+            <p> supplyID: <?php echo $supply->id;?></p>
+            <p> Date Create: <?php echo $supply->date_create;?></p>
+            <p> Bought Products: <?php echo $supply->bought_products;?></p>
+            <p> Note: <?php echo $supply->comment;?></p>
+            <p> ProductID: <?php echo $supply->product_id;?></p>
+            <p> CompanyID: <?php echo $supply->firma_id;?></p>
+            <hr>
+        </div>
+        <?php } ?>
+        <?php }else {?>
+        <div class="flash-notice">Нема набавки за овој продукт!</div>
+     <?php } ?>
+    </div>
+  </div>
+ </div>

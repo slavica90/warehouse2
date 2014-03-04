@@ -2,7 +2,7 @@
 
 class ProductController extends Controller
 {
-	/**
+         /**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
@@ -51,8 +51,12 @@ class ProductController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->render('view',array(
+            $sales=Sale::model()->findAll('product_id =:product_id', array(':product_id' => $id)); // Pole od objekti od tipot sale
+            $supplies=Supply::model()->findAll('product_id =:product_id', array(':product_id' => $id));
+            $this->render('view',array(
 			'model'=>$this->loadModel($id),
+                        'sales'=>$sales,
+                        'supplies'=>$supplies,
 		));
 	}
 
