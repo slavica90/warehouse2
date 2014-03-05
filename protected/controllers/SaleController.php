@@ -109,18 +109,13 @@ class SaleController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-                if(isset($_GET['p_id']))
-                {
-                    $pr_id=$_GET['p_id'];
-                }
-                 else 
-                {      
-                    $this->redirect(array('site/index'));   
-                }
-		
+               
+		$pr_id=$model->product_id;
                 if(isset($_POST['Sale']))
 		{
+                    
 			$model->attributes=$_POST['Sale'];
+                        
 			if($model->save())
 				$this->redirect(array('product/view','id'=>$pr_id));
 		}

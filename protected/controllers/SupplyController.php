@@ -103,18 +103,20 @@ class SupplyController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
+                $pr_id=$model->product_id;
                 
-                if(isset($_GET['p_id']))
-                {
-                    $pr_id=$_GET['p_id'];
-                    $product = Product::model()->findByPk($pr_id);
-                    $product->amount = $product->amount+$model->bought_products;
-                    $product->save() ;
-                }
-                 else 
-                {      
-                    $this->redirect(array('site/index'));   
-                }
+//                if(isset($_GET['p_id']))
+//                {
+//                    $pr_id=$_GET['p_id'];
+//                    $product = Product::model()->findByPk($pr_id);
+//                    $product->amount = $product->amount+$model->bought_products;
+//                    $product->save() ;
+//                }
+//                 else if
+//                {   
+//                     
+//                    $this->redirect(array('site/index'));   
+//                }
 		if(isset($_POST['Supply']))
 		{
 			$model->attributes=$_POST['Supply'];

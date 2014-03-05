@@ -38,7 +38,8 @@
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Save'); ?>
-	</div>
+                <?php echo CHtml::Button('Cancel'); ?>
+        </div>
 
 <?php $this->endWidget(); ?>
 

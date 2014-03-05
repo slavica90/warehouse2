@@ -75,6 +75,8 @@ $this->menu=array(
             <p> Sold Products: <?php echo $sale->sold_products;?></p>
             <p> Note: <?php echo $sale->comment;?></p>
             <p> ProductID: <?php echo $sale->product_id;?></p>
+           <?php echo CHtml::link("Измени",array('sale/update',
+      'id'=>$sale->id)); ?>
             <hr>
         </div>
     <?php } ?>
@@ -95,6 +97,8 @@ $this->menu=array(
             <p> Note: <?php echo $supply->comment;?></p>
             <p> ProductID: <?php echo $supply->product_id;?></p>
             <p> CompanyID: <?php echo $supply->firma_id;?></p>
+            <?php echo CHtml::link("Измени",array('supply/update',
+      'id'=>$supply->id)); ?>
             <hr>
         </div>
         <?php } ?>
