@@ -46,7 +46,7 @@
         
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Save'); ?>
-                <?php echo CHtml::Button('Cancel'); ?>
+                <?php echo CHtml::button('Cancel', array('submit' => array('product/view', 'id'=>$pr_id))); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

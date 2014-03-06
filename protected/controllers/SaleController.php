@@ -1,3 +1,9 @@
+ <script type="text/javascript">
+$(document).ready(function(){
+  $("#Sale_sold_products").spinner();
+  
+});
+</script>
 <?php
 
 class SaleController extends Controller
@@ -63,7 +69,10 @@ class SaleController extends Controller
 	public function actionCreate()
 	{
 		$model=new Sale;
-
+                
+                $baseUrl = Yii::app()->baseUrl; 
+                $cs = Yii::app()->getClientScript();
+                $cs->registerScriptFile($baseUrl.'/js/jquery-mousewheel-master.js');
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
                 if(isset($_GET['p_id']))
