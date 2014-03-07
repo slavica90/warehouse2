@@ -1,9 +1,3 @@
- <script type="text/javascript">
-$(document).ready(function(){
-  $("#Sale_sold_products").spinner();
-  
-});
-</script>
 <?php
 
 class SaleController extends Controller

@@ -3,7 +3,13 @@
 /* @var $model Sale */
 /* @var $form CActiveForm */
 ?>
-
+ <script type="text/javascript">
+$(document).ready(function(){
+     var spinner = $( "#Sale_sold_products" ).spinner();
+ spinner.spinner( "value", 5 );
+    
+});
+</script>
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
