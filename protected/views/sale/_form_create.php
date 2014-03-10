@@ -6,7 +6,8 @@
  <script type="text/javascript">
 $(document).ready(function(){
      var spinner = $( "#Sale_sold_products" ).spinner();
- spinner.spinner( "value", 5 );
+    spinner.spinner( "value", 0 );
+    $('#Sale_sold_products').number( true, 2 );
     
 });
 </script>

@@ -66,7 +66,8 @@ class SaleController extends Controller
                 
                 $baseUrl = Yii::app()->baseUrl; 
                 $cs = Yii::app()->getClientScript();
-                $cs->registerScriptFile($baseUrl.'/js/jquery-mousewheel-master.js');
+                $cs->registerScriptFile($baseUrl.'/js/jquery-mousewheel-master/jquery.mousewheel.js');
+                $cs->registerScriptFile($baseUrl.'/js/jquery-number-master/jquery.number.js');
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
                 if(isset($_GET['p_id']))
