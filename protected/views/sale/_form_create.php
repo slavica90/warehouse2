@@ -5,10 +5,14 @@
 ?>
  <script type="text/javascript">
 $(document).ready(function(){
-     var spinner = $( "#Sale_sold_products" ).spinner();
+     var spinner = $( "#Sale_sold_products" ).spinner({
+      step: 0.1,
+      numberFormat: "n",
+      page: 0.1
+    });
     spinner.spinner( "value", 0 );
-    $('#Sale_sold_products').number( true, 2 );
-    
+    $("#Sale_sold_products").numeric();
+     
 });
 </script>
 <div class="form">
@@ -22,18 +26,19 @@ $(document).ready(function(){
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Полињата означени со <span class="required">*</span> се задолжителни.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'sold_products'); ?>
-		<?php echo $form->textField($model,'sold_products'); ?>
+		<?php echo $form->labelEx($model,'Внесете продадена количина'); ?>
+		<?php echo $form->textField($model,'sold_products');?>
+                <?php echo  $product->measurement; ?>
 		<?php echo $form->error($model,'sold_products'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'comment'); ?>
+		<?php echo $form->labelEx($model,'Забелешка'); ?>
 		<?php echo $form->textArea($model,'comment',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'comment'); ?>
 	</div>

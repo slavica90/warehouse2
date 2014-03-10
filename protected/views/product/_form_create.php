@@ -3,7 +3,18 @@
 /* @var $model Product */
 /* @var $form CActiveForm */
 ?>
-
+<script type="text/javascript">
+$(document).ready(function(){
+     var spinner = $( "#Product_amount" ).spinner({
+      step: 0.1,
+      numberFormat: "n",
+      page: 0.1
+    });
+    spinner.spinner( "value", 0 );
+    $("#Product_amount").numeric();
+      
+});
+</script>
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(

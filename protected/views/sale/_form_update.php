@@ -3,7 +3,6 @@
 /* @var $model Sale */
 /* @var $form CActiveForm */
 ?>
-
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -15,18 +14,19 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Полињата означени со <span class="required">*</span> се задолжителни.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'sold_products'); ?>
+		<?php echo $form->labelEx($model,'Внесете продадена количина'); ?>
 		<?php echo $form->textField($model,'sold_products', array('disabled'=>'true')); ?>
+                <?php echo  $product->measurement; ?>
 		<?php echo $form->error($model,'sold_products'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'comment'); ?>
+		<?php echo $form->labelEx($model,'Забелешка'); ?>
 		<?php echo $form->textArea($model,'comment',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'comment'); ?>
 	</div>

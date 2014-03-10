@@ -67,7 +67,13 @@ class ProductController extends Controller
 	public function actionCreate()
 	{
 		$model=new Product;
-
+                
+                $baseUrl = Yii::app()->baseUrl; 
+                $cs = Yii::app()->getClientScript();
+                $cs->registerScriptFile($baseUrl.'/js/jquery-mousewheel-master/jquery.mousewheel.js');
+                $cs->registerScriptFile($baseUrl.'/js/numeric/jquery.numeric.js');
+                //$cs->registerScriptFile($baseUrl.'/js/jquery-number-master/jquery.number.js');
+                
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -75,7 +81,6 @@ class ProductController extends Controller
             {
                     $model->attributes=$_POST['Product'];
                     
-                   
                     $fileImage=CUploadedFile::getInstance($model,'image_url');
                      if(!is_null($fileImage)){
                         $model->image_url = $fileImage;
@@ -126,6 +131,12 @@ class ProductController extends Controller
 	{
 		$model=$this->loadModel($id);
 
+                $baseUrl = Yii::app()->baseUrl; 
+                $cs = Yii::app()->getClientScript();
+                $cs->registerScriptFile($baseUrl.'/js/jquery-mousewheel-master/jquery.mousewheel.js');
+                $cs->registerScriptFile($baseUrl.'/js/numeric/jquery.numeric.js');
+                //$cs->registerScriptFile($baseUrl.'/js/jquery-number-master/jquery.number.js');
+                
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 

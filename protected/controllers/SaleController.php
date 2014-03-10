@@ -67,16 +67,17 @@ class SaleController extends Controller
                 $baseUrl = Yii::app()->baseUrl; 
                 $cs = Yii::app()->getClientScript();
                 $cs->registerScriptFile($baseUrl.'/js/jquery-mousewheel-master/jquery.mousewheel.js');
-                $cs->registerScriptFile($baseUrl.'/js/jquery-number-master/jquery.number.js');
+                $cs->registerScriptFile($baseUrl.'/js/numeric/jquery.numeric.js');
+                //$cs->registerScriptFile($baseUrl.'/js/jquery-number-master/jquery.number.js');
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
                 if(isset($_GET['p_id']))
                 {
                         $pr_id=$_GET['p_id'];
+                        $product = Product::model()->findByPk($pr_id);
                         if(isset($_POST['Sale']))
                         {
                             $model->attributes=$_POST['Sale'];
-                            $product = Product::model()->findByPk($pr_id);
                             $sold=(float) $model->sold_products;
                             $total=(float) $product->amount;
                             if($sold <= $total){
@@ -98,7 +99,7 @@ class SaleController extends Controller
                 }
 
 		$this->render('create',array(
-			'model'=>$model, 'pr_id'=>$pr_id,
+			'model'=>$model, 'pr_id'=>$pr_id, 'product'=>$product
 		));
 	}
 
@@ -113,8 +114,10 @@ class SaleController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-               
+                                
 		$pr_id=$model->product_id;
+                $product = Product::model()->findByPk($pr_id);
+                
                 if(isset($_POST['Sale']))
 		{
                     
@@ -125,7 +128,7 @@ class SaleController extends Controller
 		}
 
 		$this->render('update',array(
-			'model'=>$model,'pr_id'=>$pr_id,
+			'model'=>$model,'pr_id'=>$pr_id,'product'=>$product
 		));
 	}
 

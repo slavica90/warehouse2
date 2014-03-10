@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Supply <?php echo $model->id; ?></h1>
+<h1>Ажурирај набавка: <?php echo $model->id; ?></h1>
 
-<?php $this->renderPartial('_form_update', array('model'=>$model, 'pr_id'=>$pr_id)); ?>
+<?php $this->renderPartial('_form_update', array('model'=>$model, 'pr_id'=>$pr_id, 'product'=>$product)); ?>

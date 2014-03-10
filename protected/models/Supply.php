@@ -38,8 +38,8 @@ class Supply extends CActiveRecord
 		return array(
 			array('bought_products, firma_id', 'required'),
 			array('product_id, firma_id', 'numerical', 'integerOnly'=>true),
-                        array('bought_products', 'numerical'),
-			array('comment', 'safe'),
+                        array('bought_products', 'numerical','integerOnly'=>false, 'min'=>0),
+                        array('comment', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, date_create, bought_products, comment, product_id, firma_id', 'safe', 'on'=>'search'),

@@ -52,7 +52,7 @@ class Product extends CActiveRecord
 		return array(
 			array('name, code, purchase_price, sell_price, amount, instock, image_url, firma_id', 'required'),
 			array('purchase_price, sell_price, instock, user_id, firma_id', 'numerical', 'integerOnly'=>true),
-			array('amount', 'numerical'),
+			array('amount', 'numerical', 'integerOnly'=>false,'min'=>0),
 			array('name, image_url', 'length', 'max'=>255),
 			array('code, measurement', 'length', 'max'=>50),
 			array('date_create, date_update, date_out, date_in', 'safe'),
