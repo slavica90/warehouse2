@@ -22,6 +22,8 @@
  */
 class Product extends CActiveRecord
 {
+    
+        public $kategorii; // virtuelen atribut za kategoriite
 	/**
 	 * @return string the associated database table name
 	 */
@@ -57,6 +59,7 @@ class Product extends CActiveRecord
 			array('code, measurement', 'length', 'max'=>50),
 			array('date_create, date_update, date_out, date_in', 'safe'),
                         array('user_id', 'numerical', 'integerOnly'=>true),
+                        array('kategorii', 'shtikliraniKategorii'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, name, code, purchase_price, sell_price, amount, measurement, date_create, date_update, date_out, date_in, image_url, instock, user_id, firma_id', 'safe', 'on'=>'search'),
@@ -154,4 +157,17 @@ class Product extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        
+        /**
+        * proverka dali ima barem edna stiklirana kategorija
+        * dokolku nema nitu edna stiklirana kategorija da se pojavi poraka za
+        * greska
+        * Ovoj 'shtikliraniKategorii' validator e deklariran vo rules().
+        */
+        public function shtikliraniKategorii($attribute)
+        {
+            if (!is_array($this->$attribute)){
+                 $this->addError($attribute, 'Nemate stiklirano kategorii');
+            }
+        }
 }
