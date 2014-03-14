@@ -98,15 +98,26 @@ $(document).ready(function(){
 		<?php echo $form->error($model,'instock'); ?>
 	</div>
 
-	<div class="row">
-                <?php $categorylist=Category::model()->findAll(); ?>
-                <?php foreach($categorylist as $singlecategory){?>
+        
+        <div class="row">
+                <?php 
+                    echo $form->checkBoxList(
+                        $model, // current model
+                        'kategorii', // attribute name
+                        CHtml::listData(Category::model()->findAll(),'id','name'), // all checkboxes 
+                            array('template' => '<span>{label}{input}</span>') // template , how to show Label first than checkbox
+                    );
+                ?>
+        </div>
+<!--	<div class="row">
+                <?php //$categorylist=Category::model()->findAll(); ?>
+                <?php //foreach($categorylist as $singlecategory){?>
                 <label>
-                    <input type="checkbox" name="chbox[]" value="<?php echo $singlecategory->id ?>" class="checkbox_bookcreate" />
-                     <?php echo $singlecategory->name; ?>
+                    <input type="checkbox" name="chbox[]" value="<?php// echo $singlecategory->id ?>" class="checkbox_bookcreate" />
+                     <?php //echo $singlecategory->name; ?>
                 </label>
-                <?php } ?>
-        </div> 
+                <?php// } ?>
+        </div> -->
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Create'); ?>
