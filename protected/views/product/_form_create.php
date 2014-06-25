@@ -113,10 +113,10 @@ $(document).ready(function(){
                 <?php //$categorylist=Category::model()->findAll(); ?>
                 <?php //foreach($categorylist as $singlecategory){?>
                 <label>
-                    <input type="checkbox" name="chbox[]" value="<?php// echo $singlecategory->id ?>" class="checkbox_bookcreate" />
+                    <input type="checkbox" name="chbox[]" value="<?php // echo $singlecategory->id ?>" class="checkbox_bookcreate" />
                      <?php //echo $singlecategory->name; ?>
                 </label>
-                <?php// } ?>
+                <?php // } ?>
         </div> -->
 
 	<div class="row buttons">

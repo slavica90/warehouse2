@@ -117,7 +117,7 @@ $(document).ready(function(){
         
         
 <!--	<div class="row">
-            <?php// $categoryproductitems=  CategoryProduct::model()->findAll('product_id=:product_id', array(":product_id"=>$model->id)); // site stavki od tabelata CategoryProduct
+            <?php // $categoryproductitems=  CategoryProduct::model()->findAll('product_id=:product_id', array(":product_id"=>$model->id)); // site stavki od tabelata CategoryProduct
                 //if($categoryproductitems != NULL){   
                   //  foreach ($categoryproductitems as $categoryproductitem) {
                     //       $idkategorii[]= $categoryproductitem->category_id; // niza od site id-a na categorybook
@@ -137,10 +137,10 @@ $(document).ready(function(){
                         </label>
                 <?php //} else{?>
                         <label>
-                            <input type="checkbox" name="chbox[]" value="<?php// echo $singlecategory->id ?>" />
-                            <?php// echo $singlecategory->name; ?>
+                            <input type="checkbox" name="chbox[]" value="<?php // echo $singlecategory->id ?>" />
+                            <?php // echo $singlecategory->name; ?>
                         </label>
-                <?php// } ?>
+                <?php // } ?>
             <?php //} ?>
          
         </div> -->
