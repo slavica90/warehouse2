@@ -99,52 +99,17 @@ $(document).ready(function(){
 
         <div class="row">
                 <?php 
-                    $category_array = array(); // pole od site kategorii
-                    $categories = $model->kategorii; // pole od site selektirani kategorii
-                    var_dump($categories);
-                  //  foreach ($categories as $cat){
-                   //     $category_array[] = (int)$cat->id; // za sekoja od selektiranite kategorii se zema id
-                  //  }
-                 //   $model->kategorii = $category_array; // set value (check those checkboxes that users has status 1)
-                    echo $form->checkBoxList(
+                        echo $form->checkBoxList(
                         $model, // current model
                         'kategorii', // attribute name
                         CHtml::listData(Category::model()->findAll(),'id','name'), // all checkboxes 
                             array('template' => '<span>{label}{input}</span>') // template , how to show Label first than checkbox
                     );
+     
                 ?>
+     
         </div>
         
-        
-<!--	<div class="row">
-            <?php // $categoryproductitems=  CategoryProduct::model()->findAll('product_id=:product_id', array(":product_id"=>$model->id)); // site stavki od tabelata CategoryProduct
-                //if($categoryproductitems != NULL){   
-                  //  foreach ($categoryproductitems as $categoryproductitem) {
-                    //       $idkategorii[]= $categoryproductitem->category_id; // niza od site id-a na categorybook
-                      //  }
-                //}
-                //else {
-                  //  $idkategorii[]= NULL;
-               // }?>
-            
-             <?php //$categorylist=Category::model()->findAll(); ?>
-            
-               <?php //foreach($categorylist as $singlecategory){
-                   // if($idkategorii!= NULL && in_array($singlecategory->id, $idkategorii)){?>
-                        <label>
-                            <input type="checkbox" name="chbox[]" value="<?php //echo $singlecategory->id ?>" checked="true"/>
-                            <?php //echo $singlecategory->name; ?>
-                        </label>
-                <?php //} else{?>
-                        <label>
-                            <input type="checkbox" name="chbox[]" value="<?php // echo $singlecategory->id ?>" />
-                            <?php // echo $singlecategory->name; ?>
-                        </label>
-                <?php // } ?>
-            <?php //} ?>
-         
-        </div> -->
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Update'); ?>
 	</div>

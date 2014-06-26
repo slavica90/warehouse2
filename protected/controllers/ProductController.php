@@ -147,7 +147,7 @@ class ProductController extends Controller
                         $model->image_url = $fileImage;
                    }
                    
-                    $idNaKategorii=$_POST['chbox'];                              
+                   $idNaKategorii=$model->kategorii;                              
                     $model->attributes=$_POST['Product'];
                     
                     if($model->save())

@@ -23,7 +23,19 @@
 class Product extends CActiveRecord
 {
     
-        public $kategorii; // virtuelen atribut za kategoriite
+            
+         public function getKategorii()
+   {
+            $siteshtiklirani=$this->categories;
+             foreach ($siteshtiklirani as $shtiklirana){
+                        $category_array[] = (int)$shtiklirana->id; // za sekoja od selektiranite kategorii se zema id
+                   }  
+      return $category_array;
+   }
+   
+   public function setKategorii($value){
+        $this->kategorii = $value;
+    }
 	/**
 	 * @return string the associated database table name
 	 */
@@ -57,9 +69,9 @@ class Product extends CActiveRecord
 			array('amount', 'numerical', 'integerOnly'=>false,'min'=>0),
 			array('name, image_url', 'length', 'max'=>255),
 			array('code, measurement', 'length', 'max'=>50),
-			array('date_create, date_update, date_out, date_in', 'safe'),
+			array('date_create, date_update, date_out, date_in, kategorii', 'safe'),
                         array('user_id', 'numerical', 'integerOnly'=>true),
-                        array('kategorii', 'shtikliraniKategorii'),
+                        array('kategorii', 'shtikliraniKategorii'), //se proveruva dali ima stiklirani kategorii
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, name, code, purchase_price, sell_price, amount, measurement, date_create, date_update, date_out, date_in, image_url, instock, user_id, firma_id', 'safe', 'on'=>'search'),
@@ -159,6 +171,13 @@ class Product extends CActiveRecord
 	}
         
         /**
+         * get metod za zemanje na site kategorii
+         * @return array
+         */
+        
+  
+        
+        /**
         * proverka dali ima barem edna stiklirana kategorija
         * dokolku nema nitu edna stiklirana kategorija da se pojavi poraka za
         * greska
@@ -166,6 +185,7 @@ class Product extends CActiveRecord
         */
         public function shtikliraniKategorii($attribute)
         {
+            
             if (!is_array($this->$attribute)){
                  $this->addError($attribute, 'Nemate stiklirano kategorii');
             }
