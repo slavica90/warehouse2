@@ -24,6 +24,13 @@ $this->pageTitle=Yii::app()->name;
   
   <p><?php echo $kategorija->description;?></p>
   <p><?php echo $kategorija->image_url;?></p>
+  
+   <?php if($kategorija->image_url) {?>
+        <img src="<?php echo $kategorija->image_url;?>" alt="<?php echo $kategorija->name;?>" width="200" height="150" />
+      <?php } else { ?>
+         <img src="images/no_img.png" alt="<?php echo $kategorija->name;?>" width="200" height="150" />
+       <?php } ?>
+         
   <p><?php echo $kategorija->date_create;?></p>
   <p><?php echo $kategorija->date_update;?></p>
   <p><?php echo $kategorija->user_id;?></p>

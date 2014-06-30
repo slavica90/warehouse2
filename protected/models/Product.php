@@ -26,6 +26,7 @@ class Product extends CActiveRecord
             
          public function getKategorii()
    {
+             $category_array = array();
             $siteshtiklirani=$this->categories;
              foreach ($siteshtiklirani as $shtiklirana){
                         $category_array[] = (int)$shtiklirana->id; // za sekoja od selektiranite kategorii se zema id
