@@ -4516,3 +4516,45 @@ in C:\wamp\www\warehouse\index.php (13)
 2014/06/30 16:28:25 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
 in C:\wamp\www\warehouse\protected\controllers\ProductController.php (154)
 in C:\wamp\www\warehouse\index.php (13)
+2014/07/02 11:08:11 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (82)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/02 11:08:45 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (82)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/02 11:08:58 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (82)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/02 11:12:40 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (82)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/02 11:19:16 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (82)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/02 11:19:28 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (82)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/02 11:19:41 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (82)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/02 11:19:59 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (150)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/02 11:20:05 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (150)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/02 11:23:54 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (150)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/02 11:23:59 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (150)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/02 11:25:13 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (82)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/02 11:25:44 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (150)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/02 11:25:48 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (150)
+in C:\wamp\www\warehouse\index.php (13)
