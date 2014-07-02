@@ -186,9 +186,16 @@ class Product extends CActiveRecord
         */
         public function shtikliraniKategorii($attribute)
         {
-            
             if (!is_array($this->$attribute)){
                  $this->addError($attribute, 'Nemate stiklirano kategorii');
             }
         }
+        
+        public static function productPhotoUrl($idproduct) {
+            $ds = DIRECTORY_SEPARATOR;
+            $product = Product::model()->findByPk($idproduct);
+            return 'images'.$ds.'upload'.$ds.'productphotos'
+                    .$ds.$idproduct.$ds.$product->image_url;             
+        }
+        
 }

@@ -81,23 +81,27 @@ class ProductController extends Controller
             {
                     $model->attributes=$_POST['Product'];
                     $fileImage=CUploadedFile::getInstance($model,'image_url');
-                    $ds = DIRECTORY_SEPARATOR; // this is `/` or `\` in windows (wamp)
-                    $imgdir = dirname(Yii::app()->basePath).$ds.'images'.$ds.'upload'.$ds.'productphotos'.$ds.$model->id;           // path   to images
-                    if (!is_dir($imgdir)) {
-                            mkdir($imgdir, 0777); // if folder does not exists, than create it 
-                    }
-                            
                     
-                   $idNaKategorii=$model->kategorii;
+                                    
+                    $idNaKategorii=$model->kategorii;
                     
                     if($model->save()) 
                     {
                        
                    if(!empty($fileImage))  // check if uploaded file is set or not
                         {
-                            $fajl = time().'_'.$model->id.'.'.$fileImage->getExtensionName();
-                            $filename = $imgdir.$ds.$fajl;
-                            $model->image_url = 'images'.$ds.'upload'.$ds.'productphotos'.$ds.$model->id.$ds.$fajl; 
+                        $photoname = time().'_'.$model->id.'.'.$fileImage->getExtensionName();
+                        
+                            $model->image_url = $photoname;
+                         
+                            $ds = DIRECTORY_SEPARATOR; // this is `/` or `\` in windows (wamp)
+                            $imgdir = dirname(Yii::app()->basePath).$ds.'images'.$ds.'upload'.$ds.'productphotos'.$ds.$model->id;           // path   to images
+                            if (!is_dir($imgdir)) {
+                                mkdir($imgdir, 0777); // if folder does not exists, than create it 
+                            }
+                            
+                            
+                            $filename = $imgdir.$ds.$photoname;
                             $fileImage->saveAs($filename); 
                          }
                             
@@ -141,22 +145,28 @@ class ProductController extends Controller
 		if(isset($_POST['Product']))
 		{
                    $fileImage=CUploadedFile::getInstance($model,'image_url');
-                   $ds = DIRECTORY_SEPARATOR; // this is `/` or `\` in windows (wamp)
-                   $imgdir = dirname(Yii::app()->basePath).$ds.'images'.$ds.'upload'.$ds.'productphotos'.$ds.$model->id;           // path   to images
-                        if (!is_dir($imgdir)) {
-                            mkdir($imgdir, 0777); // if folder does not exists, than create it 
-                            }
-                                                      
-                    $model->attributes=$_POST['Product'];
+                   
+                   
+                            
                     $idNaKategorii=$model->kategorii = $_POST['Product']['kategorii'];                            
-                                       
+                                               
+                    $model->attributes=$_POST['Product'];
+                    
                     if($model->save())
                     {
                         if(!empty($fileImage))  // check if uploaded file is set or not
                         {
-                            $fajl = time().'_'.$model->id.'.'.$fileImage->getExtensionName();
-                            $filename = $imgdir.$ds.$fajl;
-                            $model->image_url = 'images'.$ds.'upload'.$ds.'productphotos'.$ds.$model->id.$ds.$fajl;
+                            $photoname = time().'_'.$model->id.'.'.$fileImage->getExtensionName();
+                  
+                       $model->image_url = $photoname;
+                   
+                            $ds = DIRECTORY_SEPARATOR; // this is `/` or `\` in windows (wamp)
+                            $imgdir = dirname(Yii::app()->basePath).$ds.'images'.$ds.'upload'.$ds.'productphotos'.$ds.$model->id;           // path   to images
+                            if (!is_dir($imgdir)) {
+                                mkdir($imgdir, 0777); // if folder does not exists, than create it 
+                            } 
+                            
+                            $filename = $imgdir.$ds.$photoname;
                             $fileImage->saveAs($filename); 
                          }
                         $idProduct=$model->id;

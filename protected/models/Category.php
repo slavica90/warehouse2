@@ -129,4 +129,11 @@ class Category extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        
+        public static function categoryPhotoUrl($idcategory) {
+            $ds = DIRECTORY_SEPARATOR;
+            $category = Category::model()->findByPk($idcategory);
+            return 'images'.$ds.'upload'.$ds.'categoryphotos'
+                    .$ds.$idcategory.$ds.$category->image_url;             
+        }
 }

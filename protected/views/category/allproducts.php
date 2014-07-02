@@ -14,12 +14,13 @@
   <p><?php echo CHtml::link($singleproduct->name,array('product/view',
       'id'=>$singleproduct->id)); ?></p>
   <p><?php echo $singleproduct->code;?></p>
-  
+   
    <?php if($singleproduct->image_url) {?>
-        <img src="<?php echo $singleproduct->image_url;?>" alt="<?php echo $singleproduct->name;?>" width="200" height="150" />
+        <img src="<?php echo $singleproduct::productPhotoUrl($singleproduct->id);?>" alt="<?php echo $singleproduct->name;?>" width="200" height="150" />
       <?php } else { ?>
          <img src="images/no_img.png" alt="<?php echo $singleproduct->name;?>" width="200" height="150" />
        <?php } ?>
+         
    </div>
   <?php } ?>
   <?php }else {?>

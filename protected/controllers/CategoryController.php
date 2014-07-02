@@ -74,20 +74,25 @@ class CategoryController extends Controller
 			$model->attributes=$_POST['Category'];
                         
                         $fileImage=CUploadedFile::getInstance($model,'image_url');
-                        $ds = DIRECTORY_SEPARATOR; // this is `/` or `\` in windows (wamp)
+                        
+                    
+                       if($model->save())
+                        {
+                          if(!empty($fileImage))  // check if uploaded file is set or not
+                            {
+                              $photoname = time().'_'.$model->id.'.'.$fileImage->getExtensionName();
+                              $model->image_url = $photoname;
+                         
+                              
+                                $ds = DIRECTORY_SEPARATOR; // this is `/` or `\` in windows (wamp)
                                 $imgdir = dirname(Yii::app()->basePath).$ds.'images'.$ds.'upload'.$ds.'categoryphotos'.$ds.$model->id;           // path   to images
                                 if (!is_dir($imgdir)) {
                                     mkdir($imgdir, 0777); // if folder does not exists, than create it 
                                 }
-                         $fajl = time().'_'.$model->id.'.'.$fileImage->getExtensionName();
-                         $filename = $imgdir.$ds.$fajl;
-                        $model->image_url = 'images'.$ds.'upload'.$ds.'categoryphotos'.$ds.$model->id.$ds.$fajl;
                         
-			if($model->save())
-                        {
-                          if(!empty($fileImage))  // check if uploaded file is set or not
-                            {
-                                $fileImage->saveAs($filename);
+                              
+                            $filename = $imgdir.$ds.$photoname;
+                            $fileImage->saveAs($filename);
                             }
                              $this->redirect(array('view','id'=>$model->id));
                         }
@@ -115,22 +120,22 @@ class CategoryController extends Controller
 		if(isset($_POST['Category']))
 		{
                     $fileImage=CUploadedFile::getInstance($model,'image_url');
-                    
-                     $ds = DIRECTORY_SEPARATOR; // this is `/` or `\` in windows (wamp)
-                     $imgdir = dirname(Yii::app()->basePath).$ds.'images'.$ds.'upload'.$ds.'categoryphotos'.$ds.$model->id;           // path   to images
-                     if (!is_dir($imgdir)) {
-                            mkdir($imgdir, 0777); // if folder does not exists, than create it 
-                     }
-                     $fajl = time().'_'.$model->id.'.'.$fileImage->getExtensionName();
-                     $filename = $imgdir.$ds.$fajl;
-                     $model->image_url = 'images'.$ds.'upload'.$ds.'categoryphotos'.$ds.$model->id.$ds.$fajl;
-                    
-                   
+                                              
                     $model->attributes=$_POST['Category'];
                     if($model->save()){
                         if(!empty($fileImage))  // check if uploaded file is set or not
                         {
-                           $fileImage->saveAs($filename); 
+                            $photoname = time().'_'.$model->id.'.'.$fileImage->getExtensionName();
+                            $model->image_url = $photoname;
+                        
+                            $ds = DIRECTORY_SEPARATOR; // this is `/` or `\` in windows (wamp)
+                            $imgdir = dirname(Yii::app()->basePath).$ds.'images'.$ds.'upload'.$ds.'categoryphotos'.$ds.$model->id;           // path   to images
+                            if (!is_dir($imgdir)) {
+                                    mkdir($imgdir, 0777); // if folder does not exists, than create it 
+                            }
+                     
+                            $filename = $imgdir.$ds.$photoname;
+                            $fileImage->saveAs($filename); 
                          }
                          $this->redirect(array('view','id'=>$model->id));
                     }

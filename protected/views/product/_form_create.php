@@ -81,7 +81,11 @@ $(document).ready(function(){
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Фирма за нарачка'); ?>
-		<?php echo $form->textField($model,'firma_id'); ?>
+		<?php 
+                    $lista = CHtml::listData(Firma::model()->findAll(), 'id', 'name' ); 
+                    echo CHtml::activeDropDownList($model,'firma_id', $lista, 
+                            array('empty'=>'Изберете фирма за нарачка'));
+                ?>
 		<?php echo $form->error($model,'firma_id'); ?>
 	</div>
 
