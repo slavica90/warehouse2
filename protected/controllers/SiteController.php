@@ -53,9 +53,11 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
-            $kategorii=Category::model()->findAll(); // Array od Category objekti   
+            $kategorii=Category::model()->findAll(); // Array od Category objekti 
+            $produkti=Product::model()->findAll(); // Array od Product objekti
             $model=new Category;
             $this->render('index',array(
+                    'produkti' => $produkti,
                     'kategorii'=>$kategorii,
                     'model'=> $model,
       		));

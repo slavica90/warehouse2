@@ -136,4 +136,4 @@ class Category extends CActiveRecord
             return 'images'.$ds.'upload'.$ds.'categoryphotos'
                     .$ds.$idcategory.$ds.$category->image_url;             
         }
-}
+  }

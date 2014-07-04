@@ -3,6 +3,7 @@
 
 $this->pageTitle=Yii::app()->name;
 ?>
+<div>
 <div class="title_category">
 <h1> Категории </h1>
 </div>
@@ -13,6 +14,20 @@ $this->pageTitle=Yii::app()->name;
     
     
 </div>
+    <div>
+    <p>ПРОДУКТИ КОИ ТРЕБА ДА СЕ НАБАВАТ (НА ЗАЛИХА < 3)</p>
+    <?php foreach ($produkti as $pr){ ?>
+       <p><?php         if ($pr->amount < 3) {
+           echo $pr->name;
+           echo $pr->amount;
+           echo $pr->measurement;
+           }
+        ?>
+       <p>   
+     <?php } ?>
+     
+</div>
+    
 <div class="categories">
  <?php if($kategorii != NULL) {?>
 
@@ -40,3 +55,6 @@ $this->pageTitle=Yii::app()->name;
    <div class="flash-notice">Немате венсено категории!</div>
   <?php } ?>
 </div>
+
+
+    </div>

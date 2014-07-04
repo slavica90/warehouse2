@@ -198,4 +198,6 @@ class Product extends CActiveRecord
                     .$ds.$idproduct.$ds.$product->image_url;             
         }
         
+    
+        
 }
