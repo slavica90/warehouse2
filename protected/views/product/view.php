@@ -1,10 +1,4 @@
-  <script src="//code.jquery.com/jquery-1.9.1.js"></script>
-  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-  <script>
-  $(function() {
-    $( "#tabs" ).tabs();
-  });
-  </script>
+
 <?php
 /* @var $this ProductController */
 /* @var $model Product */
@@ -58,13 +52,18 @@ $this->menu=array(
       'id'=>$model->id)); ?>
        
 </div>
-<div id="tabs">
-  <ul>
-    <li><a href="#tabs-1">Продажба</a></li>
-    <li><a href="#tabs-2">Набавка</a></li>
+<div class="row-fluid">
+    <div class="span-12">
+        <h3 class="header">
+            Набавки и Продажби
+            <span class="header-line"></span>
+        </h3>
+    <ul class="nav nav-tabs">
+    <li><a href="#tabs-1" data-toggle="tab">Продажба</a></li>
+    <li><a href="#tabs-2" data-toggle="tab">Набавка</a></li>
   </ul>
-  <div id="tabs-1">
-    <div>
+<div id="tab-content">
+  <div class="tab-pane" id="tabs-1">
        
     <?php if($sales != NULL) {?>
 
@@ -83,10 +82,8 @@ $this->menu=array(
     <?php }else {?>
         <div class="flash-notice">Нема продажби за овој продукт!</div>
      <?php } ?>
-    </div>
   </div>
-  <div id="tabs-2">
-    <div>
+  <div class="tab-pane" id="tabs-2">
     <?php if($supplies != NULL) {?>
 
     <?php foreach ($supplies as $supply){?>
@@ -105,6 +102,7 @@ $this->menu=array(
         <?php }else {?>
         <div class="flash-notice">Нема набавки за овој продукт!</div>
      <?php } ?>
-    </div>
   </div>
+ </div>
+          </div>
  </div>
