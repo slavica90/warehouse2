@@ -39,14 +39,14 @@ h1,h2,h3,h4,h5
 }
 
 .container{
-	max-width:960px;
+	max-width:1280px;
 	padding-left:20px;
 	padding-right:20px;
 	
 }
 
 .navbar-inner > .container {
-	max-width:1000px;
+	max-width:1220px;
 	padding-left:0px;
 	padding-right:0px;
 }
