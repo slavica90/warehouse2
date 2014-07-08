@@ -43,7 +43,7 @@ class Category extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, description, image_url', 'required'),
+			array('name, description', 'required'),
 			array('name, image_url', 'length', 'max'=>255),
 			array('description', 'length', 'max'=>50),
 			array('user_id', 'length', 'max'=>10),
@@ -131,9 +131,8 @@ class Category extends CActiveRecord
 	}
         
         public static function categoryPhotoUrl($idcategory) {
-            $ds = DIRECTORY_SEPARATOR;
+            $pom = Yii::app()->getBaseUrl(true);
             $category = Category::model()->findByPk($idcategory);
-            return 'images'.$ds.'upload'.$ds.'categoryphotos'
-                    .$ds.$idcategory.$ds.$category->image_url;             
+            return $pom.'/images/upload/categoryphotos/'.$idcategory.'/'.$category->image_url;             
         }
   }

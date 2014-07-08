@@ -192,12 +192,8 @@ class Product extends CActiveRecord
         }
         
         public static function productPhotoUrl($idproduct) {
-            $ds = DIRECTORY_SEPARATOR;
+            $pom = Yii::app()->getBaseUrl(true);
             $product = Product::model()->findByPk($idproduct);
-            return 'images'.$ds.'upload'.$ds.'productphotos'
-                    .$ds.$idproduct.$ds.$product->image_url;             
-        }
-        
-    
-        
-}
+            return $pom.'/images/upload/productphotos/'.$idproduct.'/'.$product->image_url;    
+        }      
+ }

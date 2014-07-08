@@ -54,7 +54,7 @@ class SiteController extends Controller
 	public function actionIndex()
 	{
             $kategorii=Category::model()->findAll(); // Array od Category objekti 
-            $produkti=Product::model()->findAll(); // Array od Product objekti
+            $produkti=Product::model()->findAll(array("condition"=>"amount < 3")); // Array od Product objekti kaj koj amount<3
             $model=new Category;
             $this->render('index',array(
                     'produkti' => $produkti,
