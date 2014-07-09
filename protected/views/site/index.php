@@ -11,7 +11,7 @@ $this->pageTitle=Yii::app()->name;
     </div>
     
 <div class="title_category">
-<h1> Категории </h1>
+<h1> Категории1 </h1>
 </div>
   
 <div class="categories">
