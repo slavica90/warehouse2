@@ -4945,3 +4945,401 @@ Stack trace:
 REQUEST_URI=/warehouse/index.php?r=product/delete&id=21
 HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
 ---
+2014/07/09 09:34:49 [error] [php] explode() expects parameter 2 to be string, array given (C:\wamp\www\warehouse\protected\extensions\tablesorter\Sorter.php:81)
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(173): Sorter->run()
+#1 C:\wamp\www\warehouse\protected\views\site\index.php(72): SiteController->widget()
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): SiteController->renderFile()
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): SiteController->renderPartial()
+#6 C:\wamp\www\warehouse\protected\controllers\SiteController.php(63): SiteController->render()
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): SiteController->runAction()
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): SiteController->filterAccessControl()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#16 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#17 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\warehouse\index.php(13): CWebApplication->run()
+REQUEST_URI=/warehouse/index.php?r=site/index
+in C:\wamp\www\warehouse\protected\extensions\tablesorter\Sorter.php (81)
+in C:\wamp\www\warehouse\protected\extensions\tablesorter\Sorter.php (154)
+in C:\wamp\www\warehouse\protected\views\site\index.php (72)
+2014/07/09 09:45:45 [error] [php] Undefined variable: delete_url (C:\wamp\www\warehouse\protected\extensions\tablesorter\Sorter.php:117)
+Stack trace:
+#0 C:\wamp\www\warehouse\protected\views\site\index.php(68): SiteController->widget()
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(126): require()
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): SiteController->renderFile()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): SiteController->renderPartial()
+#5 C:\wamp\www\warehouse\protected\controllers\SiteController.php(63): SiteController->render()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): SiteController->runAction()
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): SiteController->filterAccessControl()
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\warehouse\index.php(13): CWebApplication->run()
+REQUEST_URI=/warehouse/index.php?r=site/index
+in C:\wamp\www\warehouse\protected\extensions\tablesorter\Sorter.php (117)
+in C:\wamp\www\warehouse\protected\extensions\tablesorter\Sorter.php (154)
+in C:\wamp\www\warehouse\protected\views\site\index.php (68)
+2014/07/09 09:46:59 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (155)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/09 09:47:55 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (155)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/09 09:51:57 [error] [exception.CException] exception 'CException' with message 'Property "Product.category" is not defined.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\db\ar\CActiveRecord.php(145): CComponent->__get('category')
+#1 C:\wamp\www\warehouse\protected\extensions\tablesorter\Sorter.php(106): CActiveRecord->__get('category')
+#2 C:\wamp\www\warehouse\protected\extensions\tablesorter\Sorter.php(152): Sorter->genTable()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(173): Sorter->run()
+#4 C:\wamp\www\warehouse\protected\views\site\index.php(69): CBaseController->widget('application.ext...', Array)
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(126): require('C:\wamp\www\war...')
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\war...', Array, true)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\war...', Array, true)
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#9 C:\wamp\www\warehouse\protected\controllers\SiteController.php(63): CController->render('index', Array)
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('index')
+#20 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#21 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/warehouse/index.php?r=site/index
+HTTP_REFERER=http://localhost/warehouse/index.php?r=product/view&id=21
+---
+2014/07/09 09:54:19 [error] [php] explode() expects parameter 2 to be string, array given (C:\wamp\www\warehouse\protected\extensions\tablesorter\Sorter.php:80)
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(173): Sorter->run()
+#1 C:\wamp\www\warehouse\protected\views\site\index.php(70): SiteController->widget()
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): SiteController->renderFile()
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): SiteController->renderPartial()
+#6 C:\wamp\www\warehouse\protected\controllers\SiteController.php(63): SiteController->render()
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): SiteController->runAction()
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): SiteController->filterAccessControl()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#16 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#17 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\warehouse\index.php(13): CWebApplication->run()
+REQUEST_URI=/warehouse/index.php?r=site/index
+in C:\wamp\www\warehouse\protected\extensions\tablesorter\Sorter.php (80)
+in C:\wamp\www\warehouse\protected\extensions\tablesorter\Sorter.php (152)
+in C:\wamp\www\warehouse\protected\views\site\index.php (70)
+2014/07/09 10:03:18 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (83)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/09 10:03:33 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (83)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/09 10:03:59 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (83)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/09 10:48:55 [warning] [application] Failed to set unsafe attribute "image_url" of "Category".
+in C:\wamp\www\warehouse\protected\controllers\CategoryController.php (124)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/09 10:49:00 [warning] [application] Failed to set unsafe attribute "image_url" of "Category".
+in C:\wamp\www\warehouse\protected\controllers\CategoryController.php (124)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/09 10:49:06 [warning] [application] Failed to set unsafe attribute "image_url" of "Category".
+in C:\wamp\www\warehouse\protected\controllers\CategoryController.php (124)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/09 10:49:14 [warning] [application] Failed to set unsafe attribute "image_url" of "Category".
+in C:\wamp\www\warehouse\protected\controllers\CategoryController.php (124)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/09 10:50:16 [warning] [application] Failed to set unsafe attribute "image_url" of "Category".
+in C:\wamp\www\warehouse\protected\controllers\CategoryController.php (124)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/09 10:54:35 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (155)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/09 10:55:19 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (155)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/09 11:09:36 [warning] [application] Failed to set unsafe attribute "image_url" of "Category".
+in C:\wamp\www\warehouse\protected\controllers\CategoryController.php (121)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/09 11:36:06 [warning] [application] Failed to set unsafe attribute "image_url" of "Category".
+in C:\wamp\www\warehouse\protected\controllers\CategoryController.php (123)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/09 11:37:15 [warning] [application] Failed to set unsafe attribute "image_url" of "Category".
+in C:\wamp\www\warehouse\protected\controllers\CategoryController.php (123)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/09 11:51:14 [warning] [application] Failed to set unsafe attribute "image_url" of "Category".
+in C:\wamp\www\warehouse\protected\controllers\CategoryController.php (124)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/09 11:51:20 [warning] [application] Failed to set unsafe attribute "image_url" of "Category".
+in C:\wamp\www\warehouse\protected\controllers\CategoryController.php (124)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/09 11:51:27 [warning] [application] Failed to set unsafe attribute "image_url" of "Category".
+in C:\wamp\www\warehouse\protected\controllers\CategoryController.php (124)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/09 11:51:34 [warning] [application] Failed to set unsafe attribute "image_url" of "Category".
+in C:\wamp\www\warehouse\protected\controllers\CategoryController.php (124)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/09 12:24:32 [error] [exception.CException] exception 'CException' with message 'Alias "extensions.EColumnListView.EColumnListView" is invalid. Make sure it points to an existing directory or file.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\YiiBase.php:347
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWidgetFactory.php(146): YiiBase::import('extensions.ECol...', true)
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(CategoryController), 'extensions.ECol...', Array)
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(172): CBaseController->createWidget('extensions.ECol...', Array)
+#3 C:\wamp\www\warehouse\protected\views\category\index.php(20): CBaseController->widget('extensions.ECol...', Array)
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(126): require('C:\wamp\www\war...')
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\war...', Array, true)
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\war...', Array, true)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp\www\warehouse\protected\controllers\CategoryController.php(175): CController->render('index', Array)
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): CategoryController->actionIndex()
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('index')
+#19 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('category/index')
+#20 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/warehouse/index.php?r=category/index
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/09 12:24:49 [error] [exception.CException] exception 'CException' with message 'Alias "extensions.EColumnListView.EColumnListView" is invalid. Make sure it points to an existing directory or file.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\YiiBase.php:347
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWidgetFactory.php(146): YiiBase::import('extensions.ECol...', true)
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(CategoryController), 'extensions.ECol...', Array)
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(172): CBaseController->createWidget('extensions.ECol...', Array)
+#3 C:\wamp\www\warehouse\protected\views\category\index.php(20): CBaseController->widget('extensions.ECol...', Array)
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(126): require('C:\wamp\www\war...')
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\war...', Array, true)
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\war...', Array, true)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp\www\warehouse\protected\controllers\CategoryController.php(175): CController->render('index', Array)
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): CategoryController->actionIndex()
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('index')
+#19 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('category/index')
+#20 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/warehouse/index.php?r=category/index
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/09 12:25:51 [error] [exception.CException] exception 'CException' with message 'Alias "extensions.widget.EColumnListView" is invalid. Make sure it points to an existing directory or file.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\YiiBase.php:347
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWidgetFactory.php(146): YiiBase::import('extensions.widg...', true)
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(CategoryController), 'extensions.widg...', Array)
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(172): CBaseController->createWidget('extensions.widg...', Array)
+#3 C:\wamp\www\warehouse\protected\views\category\index.php(21): CBaseController->widget('extensions.widg...', Array)
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(126): require('C:\wamp\www\war...')
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\war...', Array, true)
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\war...', Array, true)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp\www\warehouse\protected\controllers\CategoryController.php(175): CController->render('index', Array)
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): CategoryController->actionIndex()
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('index')
+#19 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('category/index')
+#20 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/warehouse/index.php?r=category/index
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/09 12:26:12 [error] [exception.CException] exception 'CException' with message 'Alias "extensions.EColumnListView" is invalid. Make sure it points to an existing directory or file.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\YiiBase.php:347
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWidgetFactory.php(146): YiiBase::import('extensions.ECol...', true)
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(CategoryController), 'extensions.ECol...', Array)
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(172): CBaseController->createWidget('extensions.ECol...', Array)
+#3 C:\wamp\www\warehouse\protected\views\category\index.php(21): CBaseController->widget('extensions.ECol...', Array)
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(126): require('C:\wamp\www\war...')
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\war...', Array, true)
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\war...', Array, true)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp\www\warehouse\protected\controllers\CategoryController.php(175): CController->render('index', Array)
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): CategoryController->actionIndex()
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('index')
+#19 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('category/index')
+#20 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/warehouse/index.php?r=category/index
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/09 12:37:49 [error] [php] Undefined variable: model (C:\wamp\www\warehouse\protected\views\category\index.php:19)
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): CategoryController->renderFile()
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): CategoryController->renderPartial()
+#2 C:\wamp\www\warehouse\protected\controllers\CategoryController.php(175): CategoryController->render()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): CategoryController->actionIndex()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): CategoryController->runAction()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CategoryController->filterAccessControl()
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CategoryController->run()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\warehouse\index.php(13): CWebApplication->run()
+REQUEST_URI=/warehouse/index.php?r=category/index
+in C:\wamp\www\warehouse\protected\views\category\index.php (19)
+in C:\wamp\www\warehouse\protected\controllers\CategoryController.php (175)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/09 12:42:55 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('firma/admin')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=firma/admin
+HTTP_REFERER=http://localhost/warehouse/index.php?r=product/admin
+---
+2014/07/09 13:03:10 [error] [exception.CException] exception 'CException' with message 'Property "User.name" is not defined.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\db\ar\CActiveRecord.php(145): CComponent->__get('name')
+#1 C:\wamp\www\warehouse\protected\views\user\view.php(19): CActiveRecord->__get('name')
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(126): require('C:\wamp\www\war...')
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\war...', Array, true)
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\war...', Array, true)
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\warehouse\protected\controllers\UserController.php(56): CController->render('view', Array)
+#7 [internal function]: UserController->actionView('1')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#20 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/warehouse/index.php?r=user/view&id=1
+HTTP_REFERER=http://localhost/warehouse/index.php?r=user/admin
+---
+2014/07/09 13:03:45 [error] [exception.CException] exception 'CException' with message 'Property "User.firstnam" is not defined.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\db\ar\CActiveRecord.php(145): CComponent->__get('firstnam')
+#1 C:\wamp\www\warehouse\protected\views\user\view.php(19): CActiveRecord->__get('firstnam')
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(126): require('C:\wamp\www\war...')
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\war...', Array, true)
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\war...', Array, true)
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\warehouse\protected\controllers\UserController.php(56): CController->render('view', Array)
+#7 [internal function]: UserController->actionView('1')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#20 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/warehouse/index.php?r=user/view&id=1
+HTTP_REFERER=http://localhost/warehouse/index.php?r=user/admin
+---
+2014/07/09 13:03:48 [error] [exception.CException] exception 'CException' with message 'Property "User.firstnam" is not defined.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\db\ar\CActiveRecord.php(145): CComponent->__get('firstnam')
+#1 C:\wamp\www\warehouse\protected\views\user\view.php(19): CActiveRecord->__get('firstnam')
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(126): require('C:\wamp\www\war...')
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\war...', Array, true)
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\war...', Array, true)
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\warehouse\protected\controllers\UserController.php(56): CController->render('view', Array)
+#7 [internal function]: UserController->actionView('1')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#20 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/warehouse/index.php?r=user/view&id=1
+HTTP_REFERER=http://localhost/warehouse/index.php?r=user/admin
+---

@@ -20,7 +20,7 @@ $this->menu=array(
 <?php echo CHtml::link('Врати се назад',Yii::app()->request->urlReferrer); ?>
 </div>
 <div class="product_details">
-<h1>View Product #<?php echo $model->id; ?></h1>
+<h1>Преглед на продуктот: <?php echo $model->name; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Firma #<?php echo $model->id; ?></h1>
+<h1>Преглед на фирмата: <?php echo $model->name; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -29,3 +29,8 @@ $this->menu=array(
 		'lng',
 	),
 )); ?>
+<div>
+    <?php echo CHtml::link("Ажурирај ја фирмата",array('firma/update',
+      'id'=>$model->id), array('style'=>'float: right')); ?>
+       
+</div>

@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View User #<?php echo $model->id; ?></h1>
+<h1>Преглед на корисник: <?php echo $model->firstname; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -28,3 +28,8 @@ $this->menu=array(
 		'password',
 	),
 )); ?>
+<div>
+    <?php echo CHtml::link("Ажурирај го корисникот",array('user/update',
+      'id'=>$model->id), array('style'=>'float: right')); ?>
+       
+</div>

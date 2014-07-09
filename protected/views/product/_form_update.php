@@ -54,11 +54,11 @@ $(document).ready(function(){
 		<?php echo $form->error($model,'sell_price'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'Количина'); ?>
-		<?php echo $form->textField($model,'amount'); ?>
-		<?php echo $form->error($model,'amount'); ?>
-	</div>
+<!--	<div class="row">
+		<?php // echo $form->labelEx($model,'Количина'); ?>
+		<?php // echo $form->textField($model,'amount'); ?>
+		<?php // echo $form->error($model,'amount'); ?>
+	</div>-->
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Мерка'); ?>

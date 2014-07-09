@@ -104,7 +104,7 @@ span.header-line,.nav-tabs > li > a,
 .nav-tabs > li > a,
 .nav-tabs > li > a:hover,.nav-pills > li > a,
 .nav-pills > li > a:hover,.accordion-heading a,.table thead, .table thead a{
-	color:#ffffff;
+	color:#000;
 	text-decoration:none;
 }
 

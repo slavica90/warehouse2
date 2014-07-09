@@ -75,15 +75,15 @@ class CategoryController extends Controller
                         
                         $fileImage=CUploadedFile::getInstance($model,'image_url');
                         
-                    
+                        
+                        
                        if($model->save())
                         {
                           if(!empty($fileImage))  // check if uploaded file is set or not
                             {
                               $photoname = time().'_'.$model->id.'.'.$fileImage->getExtensionName();
-                              $model->image_url = $photoname;
-                         
-                              
+                               $model->image_url = $photoname;
+                               $model->update();
                                 $ds = DIRECTORY_SEPARATOR; // this is `/` or `\` in windows (wamp)
                                 $imgdir = dirname(Yii::app()->basePath).$ds.'images'.$ds.'upload'.$ds.'categoryphotos'.$ds.$model->id;           // path   to images
                                 if (!is_dir($imgdir)) {
@@ -122,12 +122,13 @@ class CategoryController extends Controller
                     $fileImage=CUploadedFile::getInstance($model,'image_url');
                                               
                     $model->attributes=$_POST['Category'];
+                    
                     if($model->save()){
                         if(!empty($fileImage))  // check if uploaded file is set or not
                         {
                             $photoname = time().'_'.$model->id.'.'.$fileImage->getExtensionName();
                             $model->image_url = $photoname;
-                        
+                            $model->update();
                             $ds = DIRECTORY_SEPARATOR; // this is `/` or `\` in windows (wamp)
                             $imgdir = dirname(Yii::app()->basePath).$ds.'images'.$ds.'upload'.$ds.'categoryphotos'.$ds.$model->id;           // path   to images
                             if (!is_dir($imgdir)) {

@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Category #<?php echo $model->id; ?></h1>
+<h1>Преглед на категоријата: <?php echo $model->name; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -30,3 +30,8 @@ $this->menu=array(
 		'user_id',
 	),
 )); ?>
+<div>
+    <?php echo CHtml::link("Ажурирај ја категоријата",array('category/update',
+      'id'=>$model->id), array('style'=>'float: right')); ?>
+       
+</div>

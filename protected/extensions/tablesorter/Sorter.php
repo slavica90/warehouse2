@@ -67,8 +67,7 @@ class Sorter extends CWidget
 		$class=get_class($object);
 		}
 		$count=count($datas);
-		echo "Totaly ".$count." results have been found";
-		
+				
 		//Table start
 		echo "<table class='tablesorter-bootstrap'>\n";
 		//Table head start
@@ -109,14 +108,12 @@ class Sorter extends CWidget
 			}
 			//View, Edit and Delete Urls
 			$view_url=Yii::app()->controller->createAbsoluteUrl(strtolower($class).'/view',array('id'=>$data->primaryKey));
-			$edit_url=Yii::app()->controller->createAbsoluteUrl(strtolower($class).'/update',array('id'=>$data->primaryKey));
-			$delete_url=Yii::app()->controller->createAbsoluteUrl(strtolower($class).'/delete',array('id'=>$data->primaryKey));
+//			$edit_url=Yii::app()->controller->createAbsoluteUrl(strtolower($class).'/update',array('id'=>$data->primaryKey));
+//			$delete_url=Yii::app()->controller->createAbsoluteUrl(strtolower($class).'/delete',array('id'=>$data->primaryKey));
 			
 			//View, Edit, Delete Icons (bootstrap)
 			echo "<td>   <a class='btn btn-small' href='".$view_url."'><i class='icon-search'></i></a>
-				  &nbsp; <a class='btn btn-small' href='".$edit_url."'><i class='icon-edit'></i></a>
-				  &nbsp; <a class='btn btn-small' href='".$delete_url."'><i class='icon-trash'></i></a>
-				  </td>";
+                                </td>";
 			echo "</tr>\n";
 		}
 		echo "</tbody>\n";
@@ -145,6 +142,7 @@ class Sorter extends CWidget
 		
 		echo "</table>\n";
 		//Table end
+                echo "Има вкупно ".$count." продукти за набавка";
 	}
 	
 	//Runs after the widget is intialized

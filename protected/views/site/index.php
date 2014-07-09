@@ -11,7 +11,7 @@ $this->pageTitle=Yii::app()->name;
     </div>
     
 <div class="title_category">
-<h1> Категории1 </h1>
+<h1> Категории</h1>
 </div>
   
 <div class="categories">
@@ -20,17 +20,17 @@ $this->pageTitle=Yii::app()->name;
 
     <?php foreach ($kategorii as $kategorija){?>
     <div class="single_category">
-         <?php if($kategorija->image_url) {?>
-        <a class="single_photo" href="#" title="Category">
-        <img width="245" height="309" src="<?php echo $kategorija::categoryPhotoUrl($kategorija->id);?>" alt="<?php echo $kategorija->name;?>" style="opacity: 1; visibility: visible;" />
-        </a>     
-        <?php } else { ?>
-         <a class="single_photo" href="#" title="Category">
-         <img width="245" height="309" src="images/no_img.png" alt="<?php echo $kategorija->name;?>" style="opacity: 1; visibility: visible;" />
-        </a>          
-        <?php } ?>
-        
-           
+         <?php if($kategorija->image_url) {
+       
+            $imghtml=CHtml::image($kategorija::categoryPhotoUrl($kategorija->id), 'categoryphoto',
+                    array( 'width'=> '245', 'height'=>'309'));
+            echo  CHtml::link($imghtml, array('category/allproducts','id'=>$kategorija->id));
+         } else { 
+            $imghtml=CHtml::image(Yii::app()->getBaseUrl(true).'/images/no_img.png', 'np_photo', array( 'width'=> '245', 'height'=>'309'));
+            echo  CHtml::link($imghtml, array('category/allproducts','id'=>$kategorija->id));
+            
+      } ?>
+              
         <div class="category_desc">
             <h4><?php echo CHtml::link($kategorija->name,array('category/allproducts',
       'id'=>$kategorija->id)); ?> </h4>
@@ -60,8 +60,11 @@ $this->pageTitle=Yii::app()->name;
     'columns'=>array(
         'id',
         'name',
+        'purchase_price',
+        'sell_price',
         'amount', 
-        'measurement', // Relation value given in model
+        'measurement', 
+       
     )
 ));
    ?>
