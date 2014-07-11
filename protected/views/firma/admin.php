@@ -39,14 +39,29 @@ $('.search-form form').submit(function(){
 	'id'=>'firma-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+        'summaryText' => 'Приказ: {start} - {end} од вкупно {count} записи',
+        'pager' => array('header' => 'Оди на страница: '),
 	'columns'=>array(
-		'id',
-		'name',
-		'address',
-		'phone_number',
-		'lat',
-		'lng',
 		array(
+                    'header' => 'Ред.бр.',
+                    'name'=>'id'),
+		array(
+                    'header' => 'Назив.',
+                    'name'=>'name'),
+		array(
+                    'header' => 'Адреса',
+                    'name'=>'address'),
+		array(
+                    'header' => 'Телефон',
+                    'name'=>'phone_number'),
+		array(
+                    'header' => 'Координати',
+                    'name'=>'lat'),
+		array(
+                    'header' => 'Координати',
+                    'name'=>'lng'),
+		array(
+                        'header' => 'Прегледај/Измени',
 			'class'=>'CButtonColumn',
 		),
 	),

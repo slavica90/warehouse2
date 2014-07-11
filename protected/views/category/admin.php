@@ -39,17 +39,30 @@ $('.search-form form').submit(function(){
 	'id'=>'category-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+        'summaryText' => 'Приказ: {start} - {end} од вкупно {count} записи',
+        'pager' => array('header' => 'Оди на страница: '),
 	'columns'=>array(
-		'id',
-		'name',
-		'description',
-		'image_url',
-		'date_create',
-		'date_update',
+		array(
+                    'header' => 'Ред.бр.',
+                    'name'=>'id'),
+		array(
+                    'header' => 'Назив',
+                    'name'=>'name'),
+		array(
+                    'header' => 'Опис',
+                    'name'=>'description'),
+		array(
+                    'header' => 'Датум на креирање',
+                    'name'=>'date_create'),
+		array(
+                    'header' => 'Датум на ажурирање',
+                    'name'=>'date_update'),
 		/*
+                'image_url',
 		'user_id',
 		*/
 		array(
+                        'header' => 'Прегледај/Измени',
 			'class'=>'CButtonColumn',
 		),
 	),

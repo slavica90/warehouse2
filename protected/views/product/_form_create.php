@@ -67,17 +67,17 @@ $(document).ready(function(){
 		<?php echo $form->error($model,'measurement'); ?>
        </div>
 
-	<div class="row">
-                <?php echo $form->labelEx($model,'Дата(излез)'); ?>
-                <?php echo $form->textField($model,'date_out',array('id'=>'datepicker')); ?>
-		<?php echo $form->error($model,'date_out'); ?>
+<!--	<div class="row">
+                <?php // echo $form->labelEx($model,'Дата(излез)'); ?>
+                <?php // echo $form->textField($model,'date_out',array('id'=>'datepicker')); ?>
+		<?php // echo $form->error($model,'date_out'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Дата(влез)'); ?>
-		<?php echo $form->textField($model,'date_in',array('id'=>'datepicker1')); ?>
-		<?php echo $form->error($model,'date_in'); ?>
-	</div>
+		<?php // echo $form->labelEx($model,'Дата(влез)'); ?>
+		<?php // echo $form->textField($model,'date_in',array('id'=>'datepicker1')); ?>
+		<?php // echo $form->error($model,'date_in'); ?>
+	</div>-->
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Фирма за нарачка'); ?>

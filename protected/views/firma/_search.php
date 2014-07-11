@@ -17,32 +17,23 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'name'); ?>
+		<?php echo $form->label($model,'Име'); ?>
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'address'); ?>
+		<?php echo $form->label($model,'Адреса'); ?>
 		<?php echo $form->textField($model,'address',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'phone_number'); ?>
+		<?php echo $form->label($model,'Телефон'); ?>
 		<?php echo $form->textField($model,'phone_number',array('size'=>40,'maxlength'=>40)); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model,'lat'); ?>
-		<?php echo $form->textField($model,'lat'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'lng'); ?>
-		<?php echo $form->textField($model,'lng'); ?>
-	</div>
-
+	
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+		<?php echo CHtml::submitButton('Пребарај'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

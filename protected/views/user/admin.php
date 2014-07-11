@@ -39,13 +39,26 @@ $('.search-form form').submit(function(){
 	'id'=>'user-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+        'summaryText' => 'Приказ: {start} - {end} од вкупно {count} записи',
+        'pager' => array('header' => 'Оди на страница: '),
 	'columns'=>array(
-		'id',
-		'firstname',
-		'email',
-		'username',
-		'password',
+		array (
+                    'header' => 'Ред.бр.',
+                    'name'=>'id'),
+		array (
+                    'header' => 'Име',
+                    'name'=>'firstname'),
+		array (
+                    'header' => 'e-mail',
+                    'name'=>'email'),
+		array (
+                    'header' => 'Корисничко име',
+                    'name'=>'username'),
+		array (
+                    'header' => 'Лозинка',
+                    'name'=>'password'),
 		array(
+                        'header' => 'Прегледај/Измени',
 			'class'=>'CButtonColumn',
 		),
 	),

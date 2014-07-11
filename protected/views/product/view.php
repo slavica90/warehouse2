@@ -34,8 +34,6 @@ $this->menu=array(
 		'measurement',
 		'date_create',
 		'date_update',
-		'date_out',
-		'date_in',
 		'firma_id',
 		'image_url',
 		'instock',

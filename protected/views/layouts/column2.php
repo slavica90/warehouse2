@@ -6,7 +6,7 @@
 	
     <div class="span8">
 
-		<?php if(isset($this->breadcrumbs)):?>
+            <?php if(isset($this->breadcrumbs)):?>
             <?php $this->widget('zii.widgets.CBreadcrumbs', array(
                 'links'=>$this->breadcrumbs,
                 'homeLink'=>CHtml::link('Dashboard'),

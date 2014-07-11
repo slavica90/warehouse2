@@ -1,4 +1,8 @@
-<div class="add_product">
+<div class="main_container">
+<div class="title_category">
+    <h1> Листа на продукти во категоријата: КАТЕГОРИЈА</h1>
+</div>
+<div class="add_category">
     
     <?php echo CHtml::link('Додади нов продукт',array('product/create'),
             array('style'=>'float: right')); ?>
@@ -27,5 +31,6 @@
    <div class="flash-notice">Немате венсено продукти!</div>
   <?php 
   } ?>
+</div>
 </div>
 

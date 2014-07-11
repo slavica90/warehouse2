@@ -46,34 +46,19 @@
 		<?php echo $form->textField($model,'measurement',array('size'=>50,'maxlength'=>50)); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model,'Дата(креирање)'); ?>
-		<?php echo $form->textField($model,'date_create'); ?>
+	<!--	<div class="row">
+		<?php // echo $form->label($model,'Дата(излез)'); ?>
+		<?php // echo $form->textField($model,'date_out'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'Дата(ажурирање)'); ?>
-		<?php echo $form->textField($model,'date_update'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'Дата(излез)'); ?>
-		<?php echo $form->textField($model,'date_out'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'Дата(влез)'); ?>
-		<?php echo $form->textField($model,'date_in'); ?>
-	</div>
+		<?php // echo $form->label($model,'Дата(влез)'); ?>
+		<?php // echo $form->textField($model,'date_in'); ?>
+	</div>-->
 
 	<div class="row">
 		<?php echo $form->label($model,'Фирма за нарачка'); ?>
 		<?php echo $form->textField($model,'firma_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'image_url'); ?>
-		<?php echo $form->textField($model,'image_url',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">

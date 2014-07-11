@@ -29,7 +29,7 @@ class Firma extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, address, phone_number', 'required'),
+			array('name, address, phone_number, lat, lng', 'required'),
 			array('lat, lng', 'numerical'),
 			array('name, address', 'length', 'max'=>255),
 			array('phone_number', 'length', 'max'=>40),

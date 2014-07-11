@@ -39,15 +39,31 @@ $('.search-form form').submit(function(){
 	'id'=>'product-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+        'summaryText' => 'Приказ: {start} - {end} од вкупно {count} записи',
+        'pager' => array('header' => 'Оди на страница: '),
 	'columns'=>array(
-		'id',
-		'name',
-		'code',
-		'purchase_price',
-		'sell_price',
-		'amount',
+		array(
+                    'header' => 'Ред.бр.',
+                    'name'=>'id'),
+		array(
+                    'header' => 'Назив',
+                    'name'=>'name'),
+		array(
+                    'header' => 'Код',
+                    'name'=>'code'),
+		array(
+                    'header' => 'Набавна цена',
+                    'name'=>'purchase_price'),
+		array(
+                    'header' => 'Продажна цена',
+                    'name'=>'sell_price'),
+		array(
+                    'header' => 'Количина',
+                    'name'=>'amount'),
+                array(
+                    'header' => 'Мерка',
+                    'name'=>'measurement'),
 		/*
-		'measurement',
 		'date_create',
 		'date_update',
 		'date_out',
@@ -58,6 +74,7 @@ $('.search-form form').submit(function(){
 		'user_id',
 		*/
 		array(
+                        'header' => 'Прегледај/Измени',
 			'class'=>'CButtonColumn',
 		),
 	),

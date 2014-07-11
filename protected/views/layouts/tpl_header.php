@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl;?>/js/lightbox/css/lightbox.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl;?>/css/template.css">   
     <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl;?>/css/style1.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl;?>/css/mapa.css"/>
     <link rel="alternate stylesheet" type="text/css" media="screen" title="style2" href="<?php echo $baseUrl;?>/css/style2.css" />
     <link rel="alternate stylesheet" type="text/css" media="screen" title="style3" href="<?php echo $baseUrl;?>/css/style3.css" />
     <link rel="alternate stylesheet" type="text/css" media="screen" title="style4" href="<?php echo $baseUrl;?>/css/style4.css" />
@@ -30,7 +31,10 @@
     
     <script type="text/javascript" src="<?php echo $baseUrl;?>/js/swfobject/swfobject.js"></script>
 	<script type="text/javascript" src="<?php echo $baseUrl;?>/js/lightbox/js/lightbox.js"></script>
-    <!-- style switcher -->
+            <script type="text/javascript"src="<?php echo $baseUrl;?>js/jquery-1.9.1.min.js"></script>
+            <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false&language=mk"></script>
+    
+   <!-- style switcher -->
     <script type="text/javascript" src="<?php echo $baseUrl;?>/js/styleswitcher.js"></script>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
