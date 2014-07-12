@@ -4,26 +4,30 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 <div>
-    <div class="add_category">
-    
-    <?php echo CHtml::link('Додади категорија',array('category/create'),
-            array('style'=>'float: right')); ?>
+    <div class="row-fluid">
+        <div class="span12">
+            <?php echo CHtml::link('Додади категорија',array('category/create'),
+            array('style'=>'float: right', 'class' => 'btn btn-mini btn-primary')); ?>
+        </div>
     </div>
     
-<div class="title_category">
-<h1> Категории</h1>
-</div>
-  
-<div class="categories">
-   <div>
-    <?php if($kategorii != NULL) {?>
+    <div class="page-header">
+        <h1>Категории
+            <small> листа на сите категории</small>
+        </h1>
 
-    <?php foreach ($kategorii as $kategorija){?>
-    <div class="single_category">
+    </div>
+  
+<div class="row-fluid">
+    <?php if($kategorii != NULL) {?>
+       <ul class="thumbnails">
+           <?php $i = 0; ?>
+    <?php foreach ($kategorii as $kategorija){ $i++; ?>
+    <li class="span3">
+        <div class="thumbnail grid-category">
          <?php if($kategorija->image_url) {
        
-            $imghtml=CHtml::image($kategorija::categoryPhotoUrl($kategorija->id), 'categoryphoto',
-                    array( 'width'=> '245', 'height'=>'309'));
+            $imghtml=CHtml::image($kategorija::categoryPhotoUrl($kategorija->id), 'categoryphoto');
             echo  CHtml::link($imghtml, array('category/allproducts','id'=>$kategorija->id));
          } else { 
             $imghtml=CHtml::image(Yii::app()->getBaseUrl(true).'/images/no_img.png', 'np_photo', array( 'width'=> '245', 'height'=>'309'));
@@ -31,17 +35,23 @@ $this->pageTitle=Yii::app()->name;
             
       } ?>
               
-        <div class="category_desc">
-            <h4><?php echo CHtml::link($kategorija->name,array('category/allproducts',
-      'id'=>$kategorija->id)); ?> </h4>
+        <div class="caption">
+            <h3><?php echo CHtml::link($kategorija->name,array('category/allproducts',
+      'id'=>$kategorija->id)); ?> </h3>
         
-            <span>
+            <p>
                 <?php echo $kategorija->description;?>
-            </span>
+            </p>
         </div>
 
     </div>
+    </li>
+    <?php if($i > 0 && $i%4==0){ ?>
+       </ul>
+    <ul class="thumbnails">
+    <?php } ?>
   <?php } ?>
+       </ul>
   <?php }else {?>
    <div class="flash-notice">Немате венсено категории!</div>
   <?php } ?>
@@ -49,9 +59,10 @@ $this->pageTitle=Yii::app()->name;
 </div>
 
 
-<div class="nemazaliha">
-    <div class="title_category">
-        <h1> Продукти кои треба да се набават </h1>
+<div class="row-fluid">
+    <div class="page-header">
+        <h1> Продукти кои треба да се набават 
+            <small>нема доволно на залиха</small></h1>
     </div>
     
     
