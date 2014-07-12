@@ -36,8 +36,8 @@ $this->pageTitle=Yii::app()->name;
       } ?>
               
         <div class="caption">
-            <h3><?php echo CHtml::link($kategorija->name,array('category/allproducts',
-      'id'=>$kategorija->id)); ?> </h3>
+            <h2><?php echo CHtml::link($kategorija->name,array('category/allproducts',
+      'id'=>$kategorija->id)); ?> </h2>
         
             <p>
                 <?php echo $kategorija->description;?>
