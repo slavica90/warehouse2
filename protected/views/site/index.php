@@ -30,7 +30,7 @@ $this->pageTitle=Yii::app()->name;
             $imghtml=CHtml::image($kategorija::categoryPhotoUrl($kategorija->id), 'categoryphoto');
             echo  CHtml::link($imghtml, array('category/allproducts','id'=>$kategorija->id));
          } else { 
-            $imghtml=CHtml::image(Yii::app()->getBaseUrl(true).'/images/no_img.png', 'np_photo', array( 'width'=> '245', 'height'=>'309'));
+            $imghtml=CHtml::image(Yii::app()->getBaseUrl(true).'/images/no_img.png', 'np_photo');
             echo  CHtml::link($imghtml, array('category/allproducts','id'=>$kategorija->id));
             
       } ?>
