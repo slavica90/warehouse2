@@ -150,7 +150,7 @@ h1 small {
 	background-color:#FFFFFF!important;
 }
 
-.thumbnail{
+/*.thumbnail{
 	border:none;
 	-webkit-box-shadow: none;
 	box-shadow:none;
@@ -164,7 +164,7 @@ a.thumbnail:hover {
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
           box-shadow: none;
-}
+}*/
 
 
 ul.list-icon

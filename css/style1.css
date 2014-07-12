@@ -133,3 +133,7 @@ footer
 {
 	background-color:#333333;	
 }
+
+.grid-category{
+    min-height: 360px;
+}
