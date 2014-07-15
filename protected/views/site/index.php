@@ -63,6 +63,13 @@ $this->pageTitle=Yii::app()->name;
             <small>нема доволно на залиха</small></h1>
     </div>
     
+    <script>
+    $(function ()
+    {
+        $(".example6").colorbox({iframe:true, innerWidth:425, innerHeight:344});    
+    })
+</script>
+
     
    <?php $this->widget('application.extensions.tablesorter.Sorter', array(
     'data'=>$produkti,
@@ -78,6 +85,6 @@ $this->pageTitle=Yii::app()->name;
 ));
    ?>
      
-           
+    <a class='example6' href="http://google.com">Outside Webpage (Iframe)</a>       
 </div>
 </div>

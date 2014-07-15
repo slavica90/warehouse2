@@ -108,11 +108,12 @@ class Sorter extends CWidget
 			}
 			//View, Edit and Delete Urls
 			$view_url=Yii::app()->controller->createAbsoluteUrl(strtolower($class).'/view',array('id'=>$data->primaryKey));
-//			$edit_url=Yii::app()->controller->createAbsoluteUrl(strtolower($class).'/update',array('id'=>$data->primaryKey));
+			$supply_url=Yii::app()->controller->createAbsoluteUrl('supply/create',array('p_id'=>$data->primaryKey));
 //			$delete_url=Yii::app()->controller->createAbsoluteUrl(strtolower($class).'/delete',array('id'=>$data->primaryKey));
 			
 			//View, Edit, Delete Icons (bootstrap)
 			echo "<td>   <a class='btn btn-small' href='".$view_url."'><i class='icon-search'></i></a>
+                                    <button id='opener'>Брза нарачка</button>
                                 </td>";
 			echo "</tr>\n";
 		}

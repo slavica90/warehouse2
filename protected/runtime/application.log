@@ -5530,3 +5530,6 @@ Stack trace:
 REQUEST_URI=/warehouse/index.php?r=product/view&id=20
 HTTP_REFERER=http://localhost/warehouse/index.php?r=category/allproducts&id=11
 ---
+2014/07/15 12:49:50 [warning] [application] Failed to set unsafe attribute "image_url" of "Product".
+in C:\wamp\www\warehouse\protected\controllers\ProductController.php (85)
+in C:\wamp\www\warehouse\index.php (13)

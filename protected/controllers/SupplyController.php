@@ -87,6 +87,9 @@ class SupplyController extends Controller
                             if($result < $product->warning_amount ){ // moze da ima nabavka na produkt ama pak da nad granicnata vrednost
                                    $product->instock = 0; 
                              }
+                             else {
+                                 $product->instock = 1; 
+                             }
                             
                             $product->save() ;
                             if($model->save()) 

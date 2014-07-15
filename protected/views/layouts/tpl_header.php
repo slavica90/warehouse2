@@ -29,11 +29,18 @@
     <link rel="alternate stylesheet" type="text/css" media="screen" title="style5" href="<?php echo $baseUrl;?>/css/style5.css" />
     <link rel="alternate stylesheet" type="text/css" media="screen" title="style6" href="<?php echo $baseUrl;?>/css/style6.css" />
     
+    <link rel="stylesheet" type="text/css" href="<?php  echo $baseUrl;?>/js/colorbox-master/colorbox.css"/>
+    
     <script type="text/javascript" src="<?php echo $baseUrl;?>/js/swfobject/swfobject.js"></script>
 	<script type="text/javascript" src="<?php echo $baseUrl;?>/js/lightbox/js/lightbox.js"></script>
-            <script type="text/javascript"src="<?php echo $baseUrl;?>js/jquery-1.9.1.min.js"></script>
+            <script type="text/javascript" src="<?php echo $baseUrl;?>js/jquery-1.9.1.min.js"></script>
+             <!--namerno li nema crta pred js na prethidnio red-->
             <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false&language=mk"></script>
-    
+     
+            
+
+            <script type="text/javascript" src="<?php // echo $baseUrl;?>/js/colorbox-master/jquery.colorbox.js"></script>
+            
    <!-- style switcher -->
     <script type="text/javascript" src="<?php echo $baseUrl;?>/js/styleswitcher.js"></script>
 

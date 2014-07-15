@@ -87,6 +87,9 @@ class SaleController extends Controller
                                 if($result < $product->warning_amount ){
                                    $product->instock = 0; 
                                 }
+                                else {
+                                    $product->instock = 1;
+                                }
                                 $product->save() ;
                                 if($model->save()) 
                                     $this->redirect(array('product/view','id'=>$pr_id));
