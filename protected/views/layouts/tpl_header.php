@@ -39,7 +39,7 @@
      
             
 
-            <script type="text/javascript" src="<?php // echo $baseUrl;?>/js/colorbox-master/jquery.colorbox.js"></script>
+            <script type="text/javascript" src="<?php  echo $baseUrl;?>/js/colorbox-master/jquery.colorbox.js"></script>
             
    <!-- style switcher -->
     <script type="text/javascript" src="<?php echo $baseUrl;?>/js/styleswitcher.js"></script>

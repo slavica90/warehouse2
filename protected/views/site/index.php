@@ -71,20 +71,51 @@ $this->pageTitle=Yii::app()->name;
 </script>
 
     
-   <?php $this->widget('application.extensions.tablesorter.Sorter', array(
-    'data'=>$produkti,
+
+<?php $dataProvider=new CActiveDataProvider('Product');
+
+$this->widget('zii.widgets.grid.CGridView', array(
+    'dataProvider' => $dataProvider,
     'columns'=>array(
-        'id',
-        'name',
-        'purchase_price',
-        'sell_price',
-        'amount', 
-        'measurement', 
-       
-    )
+		array(
+                    'header' => 'Ред.бр.',
+                    'name'=>'id'),
+		array(
+                    'header' => 'Назив',
+                    'name'=>'name'),
+		array(
+                    'header' => 'Код',
+                    'name'=>'code'),
+		array(
+                    'header' => 'Набавна цена',
+                    'name'=>'purchase_price'),
+		array(
+                    'header' => 'Продажна цена',
+                    'name'=>'sell_price'),
+		array(
+                    'header' => 'Количина',
+                    'name'=>'amount'),
+                array(
+                    'header' => 'Мерка',
+                    'name'=>'measurement'),
+		/*
+		'date_create',
+		'date_update',
+		'date_out',
+		'date_in',
+		'firma_id',
+		'image_url',
+		'instock',
+		'user_id',
+		*/
+		array(
+                        'header' => 'Прегледај/Измени',
+			'class'=>'CButtonColumn',
+		),
+	),
 ));
-   ?>
+?>
+
      
-    <a class='example6' href="http://google.com">Outside Webpage (Iframe)</a>       
-</div>
+    <a class='example6' href="http://kostasusinov.edu.mk">Outside Webpage (Iframe)</a>       
 </div>
