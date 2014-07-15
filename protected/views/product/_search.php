@@ -40,12 +40,16 @@
 		<?php echo $form->label($model,'Количина'); ?>
 		<?php echo $form->textField($model,'amount'); ?>
 	</div>
-
-	<div class="row">
+    
+        <div class="row">
 		<?php echo $form->label($model,'Мерка'); ?>
 		<?php echo $form->textField($model,'measurement',array('size'=>50,'maxlength'=>50)); ?>
 	</div>
 
+        <div class="row">
+		<?php echo $form->label($model,'Количина за предупредување'); ?>
+		<?php echo $form->textField($model,'warning_amount'); ?>
+	</div>
 	<!--	<div class="row">
 		<?php // echo $form->label($model,'Дата(излез)'); ?>
 		<?php // echo $form->textField($model,'date_out'); ?>

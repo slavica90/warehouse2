@@ -59,12 +59,18 @@ $(document).ready(function(){
 		<?php // echo $form->textField($model,'amount'); ?>
 		<?php // echo $form->error($model,'amount'); ?>
 	</div>-->
-
-	<div class="row">
+      
+        <div class="row">
 		<?php echo $form->labelEx($model,'Мерка'); ?>
                 <?php echo CHtml::activeDropDownList( $model,'measurement', array('l' => 'l (litar)', 'br' => 'br (brojka)', 'm' => 'm (metar)')); ?>
 		<?php echo $form->error($model,'measurement'); ?>
        </div>
+
+        <div class="row">
+		<?php  echo $form->labelEx($model,'Количина за предупредување'); ?>
+		<?php  echo $form->textField($model,'warning_amount'); ?>
+		<?php  echo $form->error($model,'warning_amount'); ?>
+	</div>
 
 <!--	<div class="row">
                 <?php // echo $form->labelEx($model,'Дата(излез)'); ?>
@@ -97,11 +103,11 @@ $(document).ready(function(){
 	</div>
         
        
-	<div class="row">
-		<?php echo $form->labelEx($model,'На залиха'); ?>
-		<?php echo $form->textField($model,'instock'); ?>
-		<?php echo $form->error($model,'instock'); ?>
-	</div>
+<!--	<div class="row">
+		<?php // echo $form->labelEx($model,'На залиха'); ?>
+		<?php // echo $form->textField($model,'instock'); ?>
+		<?php // echo $form->error($model,'instock'); ?>
+	</div>-->
 
         <div class="row">
                 <?php 

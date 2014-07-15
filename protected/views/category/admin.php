@@ -25,8 +25,19 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
+<div class="row-fluid">
+        <div class="span12">
+    <?php echo CHtml::link('Додади нова категорија',array('category/create'),
+            array('style'=>'float: right', 'class' => 'btn btn-mini btn-primary')); ?>
+        </div>
+</div>
 
-<h1>Листа на сите категории</h1>
+<div class="page-header">
+        <h1>Категории
+            <small> листа на сите категории</small>
+        </h1>
+
+    </div>
 
 <?php echo CHtml::link('Напредно пребарување','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
@@ -68,8 +79,4 @@ $('.search-form form').submit(function(){
 	),
 )); ?>
 
-<div class="add_category">
-    
-    <?php echo CHtml::link('Додади нова категорија',array('category/create'),
-            array('style'=>'float: right')); ?>
-</div>
+ 

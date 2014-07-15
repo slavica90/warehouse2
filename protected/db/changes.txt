@@ -17,3 +17,6 @@ ALTER TABLE `warehouse`.`sale`     CHANGE `product_id` `product_id` INT(11) NULL
 =========================== Promeni 03.03.2014 =================================
 ALTER TABLE `warehouse`.`sale`     CHANGE `sold_products` `sold_products` FLOAT(11) NOT NULL;
 ALTER TABLE `warehouse`.`supply`     CHANGE `bought_products` `bought_products` FLOAT(11) NOT NULL;
+
+=========================== Promeni 14.07.2014 =================================
+ALTER TABLE `warehouse`.`product`     ADD COLUMN `warning_amount` FLOAT NOT NULL AFTER `firma_id`;

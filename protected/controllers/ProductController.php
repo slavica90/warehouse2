@@ -68,6 +68,8 @@ class ProductController extends Controller
 	{
 		$model=new Product;
                 
+                $newsupply= new Supply;
+                
                 $baseUrl = Yii::app()->baseUrl; 
                 $cs = Yii::app()->getClientScript();
                 $cs->registerScriptFile($baseUrl.'/js/jquery-mousewheel-master/jquery.mousewheel.js');
@@ -113,7 +115,14 @@ class ProductController extends Controller
                         $novZapis->category_id=$idNaKategorija;
                         $novZapis->save();
                         }
-         
+                        
+                        $newsupply->date_create = $model->date_create;
+                        $newsupply->bought_products = $model->amount;
+                        $newsupply->comment = 'Набавени се '.$model->amount .' продукти'; 
+                        $newsupply->product_id = $model->getPrimaryKey();
+                        $newsupply->firma_id = $model->firma_id;
+                        $newsupply->save();
+                                
                         $this->redirect(array('view','id'=>$model->id));
                     }
             }

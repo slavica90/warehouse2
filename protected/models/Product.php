@@ -19,6 +19,7 @@
  * @property string $image_url
  * @property integer $instock
  * @property integer $user_id
+ * @property integer $warning_amount
  */
 class Product extends CActiveRecord
 {
@@ -50,8 +51,13 @@ class Product extends CActiveRecord
              if ($this->isNewRecord) {
                 $this->date_create = new CDbExpression('NOW()');
                 $this->user_id = Yii::app()->user->id;
-                $this->amount = 0;
-             }
+                if($this->amount < $this->warning_amount){
+                    $this->instock = 0;
+                }
+                else {
+                    $this->instock = 1;
+                }
+               }
             $this->date_update = new CDbExpression('NOW()');
  
             return parent::beforeSave();
@@ -65,9 +71,9 @@ class Product extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, code, purchase_price, sell_price, instock, firma_id', 'required'),
+			array('name, code, purchase_price, sell_price, firma_id, warning_amount', 'required'),
 			array('purchase_price, sell_price, instock, user_id, firma_id', 'numerical', 'integerOnly'=>true),
-			array('amount', 'numerical', 'integerOnly'=>false,'min'=>0),
+			array('amount, warning_amount', 'numerical', 'integerOnly'=>false,'min'=>0),
 			array('name, image_url', 'length', 'max'=>255),
 			array('code, measurement', 'length', 'max'=>50),
 			array('date_create, date_update, date_out, date_in, kategorii', 'safe'),
@@ -75,7 +81,7 @@ class Product extends CActiveRecord
                         array('kategorii', 'shtikliraniKategorii'), //se proveruva dali ima stiklirani kategorii
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, code, purchase_price, sell_price, amount, measurement, date_create, date_update, date_out, date_in, image_url, instock, user_id, firma_id', 'safe', 'on'=>'search'),
+			array('id, name, code, purchase_price, sell_price, amount, measurement, date_create, date_update, date_out, date_in, image_url, instock, user_id, firma_id, warning_amount', 'safe', 'on'=>'search'),
                         // za prikacuvanje na slika
                         array('image_url', 'file', 'types'=>'jpg, jpeg, gif, png', 'allowEmpty'=>true),
 		);
@@ -104,20 +110,21 @@ class Product extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'code' => 'Code',
-			'purchase_price' => 'Purchase Price',
-			'sell_price' => 'Sell Price',
-			'amount' => 'Amount',
-			'measurement' => 'Measurement',
-			'date_create' => 'Date Create',
-			'date_update' => 'Date Update',
+			'name' => 'Име',
+			'code' => 'Код',
+			'purchase_price' => 'Набавна цена',
+			'sell_price' => 'Продажна цена',
+			'amount' => 'Количина',
+                        'measurement' => 'Мерка',
+                        'warning_amount' => 'Количина за предупредување',
+			'date_create' => 'Датум на креирање',
+			'date_update' => 'Датум на ажурирање',
 			'date_out' => 'Date Out',
 			'date_in' => 'Date In',
-			'firma_id' => 'Firma',
-			'image_url' => 'Image Url',
-			'instock' => 'Instock',
-			'user_id' => 'User',
+			'firma_id' => 'Фирма',
+			'image_url' => 'Патека на слика',
+			'instock' => 'На залиха',
+			'user_id' => 'Корисник',
 		);
 	}
 
@@ -154,6 +161,7 @@ class Product extends CActiveRecord
 		$criteria->compare('image_url',$this->image_url,true);
 		$criteria->compare('instock',$this->instock);
 		$criteria->compare('user_id',$this->user_id);
+                $criteria->compare('warning_amount',$this->warning_amount);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -32,6 +32,7 @@ $this->menu=array(
 		'sell_price',
 		'amount',
 		'measurement',
+                'warning_amount',
 		'date_create',
 		'date_update',
 		'firma_id',
@@ -40,15 +41,20 @@ $this->menu=array(
 		'user_id',
 	),
 )); ?>
+
+
 </div>
-<div class="product_buttons">
+<div class="row-fluid">
+    
     <?php echo CHtml::link("Продажба на продукт",array('sale/create',
-      'p_id'=>$model->id)); ?>
+      'p_id'=>$model->id), array('class' => 'btn btn-mini btn-primary')); ?>
+    
     <?php echo CHtml::link("Набавка на продукт",array('supply/create',
-      'p_id'=>$model->id)); ?>
+      'p_id'=>$model->id), array('class' => 'btn btn-mini btn-primary')); ?>
+   
     <?php echo CHtml::link("Измени го продуктот",array('product/update',
-      'id'=>$model->id)); ?>
-       
+      'id'=>$model->id), array('class' => 'btn btn-mini btn-primary')); ?>
+     
 </div>
 <div class="row-fluid">
     <div class="span-12">
@@ -67,13 +73,10 @@ $this->menu=array(
 
     <?php foreach ($sales as $sale){?>
             <div>
-            <p> saleID: <?php echo $sale->id;?></p>
-            <p> Date Create: <?php echo $sale->date_create;?></p>
-            <p> Sold Products: <?php echo $sale->sold_products;?></p>
-            <p> Note: <?php echo $sale->comment;?></p>
-            <p> ProductID: <?php echo $sale->product_id;?></p>
-           <?php echo CHtml::link("Измени",array('sale/update',
-      'id'=>$sale->id)); ?>
+            <p> Датум на креирање: <?php echo $sale->date_create;?></p>
+            <p> Продадени продукти: <?php echo $sale->sold_products;?></p>
+            <p> Забелешка: <?php echo $sale->comment;?></p>
+          <?php echo CHtml::link("Измени",array('sale/update', 'id'=>$sale->id)); ?>
             <hr>
         </div>
     <?php } ?>
@@ -86,12 +89,14 @@ $this->menu=array(
 
     <?php foreach ($supplies as $supply){?>
             <div>
-            <p> supplyID: <?php echo $supply->id;?></p>
-            <p> Date Create: <?php echo $supply->date_create;?></p>
-            <p> Bought Products: <?php echo $supply->bought_products;?></p>
-            <p> Note: <?php echo $supply->comment;?></p>
-            <p> ProductID: <?php echo $supply->product_id;?></p>
-            <p> CompanyID: <?php echo $supply->firma_id;?></p>
+            <p> Датум на креирање: <?php echo $supply->date_create;?></p>
+            <p> Набавени продукти: <?php echo $supply->bought_products;?></p>
+            <p> Забелешка: <?php echo $supply->comment;?></p>
+            <p> Фирма: 
+                <?php
+                $model = Firma::model()->findByAttributes(array('id'=>$supply->firma_id));
+                echo $model->name;
+           ?></p>
             <?php echo CHtml::link("Измени",array('supply/update',
       'id'=>$supply->id)); ?>
             <hr>

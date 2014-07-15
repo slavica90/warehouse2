@@ -26,14 +26,12 @@ $this->pageTitle=Yii::app()->name;
     <li class="span3">
         <div class="thumbnail grid-category">
          <?php if($kategorija->image_url) {
-       
             $imghtml=CHtml::image($kategorija::categoryPhotoUrl($kategorija->id), 'categoryphoto');
             echo  CHtml::link($imghtml, array('category/allproducts','id'=>$kategorija->id));
          } else { 
             $imghtml=CHtml::image(Yii::app()->getBaseUrl(true).'/images/no_img.png', 'np_photo');
             echo  CHtml::link($imghtml, array('category/allproducts','id'=>$kategorija->id));
-            
-      } ?>
+   } ?>
               
         <div class="caption">
             <h2><?php echo CHtml::link($kategorija->name,array('category/allproducts',

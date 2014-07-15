@@ -28,11 +28,15 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('Количина')); ?>:</b>
 	<?php echo CHtml::encode($data->amount); ?>
 	<br />
-
+        
 	<b><?php echo CHtml::encode($data->getAttributeLabel('Мерка')); ?>:</b>
 	<?php echo CHtml::encode($data->measurement); ?>
 	<br />
 
+         <b><?php echo CHtml::encode($data->getAttributeLabel('Количина за предупредување')); ?>:</b>
+	<?php echo CHtml::encode($data->warning_amount); ?>
+	<br />     
+        
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('date_create')); ?>:</b>
 	<?php echo CHtml::encode($data->date_create); ?>

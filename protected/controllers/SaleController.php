@@ -6,7 +6,7 @@ class SaleController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	public $layout='//layouts/column1';
 
 	/**
 	 * @return array action filters
@@ -84,6 +84,9 @@ class SaleController extends Controller
                             if($sold <= $total){
                                 $result = $total-$sold;
                                 $product->amount = (string)$result;
+                                if($result < $product->warning_amount ){
+                                   $product->instock = 0; 
+                                }
                                 $product->save() ;
                                 if($model->save()) 
                                     $this->redirect(array('product/view','id'=>$pr_id));
