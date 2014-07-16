@@ -111,11 +111,44 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		array(
                         'header' => 'Прегледај/Измени',
 			'class'=>'CButtonColumn',
-		),
+                        'template' => '{view} {update} {delete} {copy}',
+                        'buttons'=>array(
+                                'copy' => array(
+                                        'label'=>'Copy', // text label of the button
+                                        'url'=>"CHtml::normalizeUrl(array('copy', 'id'=>\$data->id))",
+                                        'imageUrl'=>'#',  // image URL of the button. If not set or false, a text link is used
+                                        'options' => array('class'=>'copy'), // HTML options for the button
+                                ),
+                        ),
+               ),
+                'link'=>array(
+                        'header'=>'Браза нарачка',
+                        'type'=>'raw',
+                        'value'=> 'CHtml::button("Нарачај",array("onclick"=>"document.location.href=\'".Yii::app()->controller->createUrl("controller/action",array("id"=>$data->id))."\'"))',
+                ),  
 	),
 ));
 ?>
 
      
-    <a class='example6' href="http://kostasusinov.edu.mk">Outside Webpage (Iframe)</a>       
+    <a class='example6' href="http://kostasusinov.edu.mk">Outside Webpage (Iframe)</a>   
+    
+    <!-- Button to trigger modal -->
+<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
+ 
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Save changes</button>
+  </div>
+</div>
+
 </div>
