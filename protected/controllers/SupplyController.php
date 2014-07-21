@@ -183,6 +183,27 @@ class SupplyController extends Controller
 			'model'=>$model,
 		));
 	}
+        
+       /**
+        * Akcija za brza naracka
+        */
+        public function actionBrzanaracka()
+	{
+//             if (isset($_POST["prv"])&&isset($_POST["op"])&&isset($_POST["vtor"])){
+//                 $productid = $_POST["id_produkt"];
+//                 $nabavena_kolicina = $_POST["nab_kol"];
+//                 $zabeleska_naracka = $_POST["zabeleska"];
+//                 $firmaid = $_POST["firma_id"];
+            //    $rezultat = "0";
+             
+              
+            echo json_encode(array("status"=>"TEST"));
+             Yii::app()->end();
+   
+//            }
+
+
+	}
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.

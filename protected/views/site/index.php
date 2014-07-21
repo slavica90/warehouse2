@@ -111,44 +111,92 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		array(
                         'header' => 'Прегледај/Измени',
 			'class'=>'CButtonColumn',
-                        'template' => '{view} {update} {delete} {copy}',
-                        'buttons'=>array(
-                                'copy' => array(
-                                        'label'=>'Copy', // text label of the button
-                                        'url'=>"CHtml::normalizeUrl(array('copy', 'id'=>\$data->id))",
-                                        'imageUrl'=>'#',  // image URL of the button. If not set or false, a text link is used
-                                        'options' => array('class'=>'copy'), // HTML options for the button
-                                ),
-                        ),
-               ),
-                'link'=>array(
-                        'header'=>'Браза нарачка',
+                        'template' => '{view} {update}',
+                      ),
+        
+          array(
+                        'header'=>'Брза Нарачка',
                         'type'=>'raw',
-                        'value'=> 'CHtml::button("Нарачај",array("onclick"=>"document.location.href=\'".Yii::app()->controller->createUrl("controller/action",array("id"=>$data->id))."\'"))',
-                ),  
+                        'value'=> 'CHtml::link("<img src=\'img/icons/brza_naracka.png\' />","#myModal", array("rel"=> $data->id.",".$data->purchase_price.",".$data->name , "role"=>"button", "data-toggle" => "modal", "class" => "kosnicka" ))',
+                ),
+        
+                
 	),
 ));
 ?>
 
-     
-    <a class='example6' href="http://kostasusinov.edu.mk">Outside Webpage (Iframe)</a>   
-    
-    <!-- Button to trigger modal -->
-<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
- 
 <!-- Modal -->
 <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">Modal header</h3>
+    <h3 id="myModalLabel">Нарачка за: <div class="ime_produkt" style="display:inline"> </div> </h3>
   </div>
   <div class="modal-body">
-    <p>One fine body…</p>
+      <input type="hidden" value="" id="skrieno_pole">
+      Внесете набавена количина: <br> <input type="text" value="" id="kolicina_brza_naracka" name="kol"><br>
+      Забелешка: <br> <input type="text" name="zabeleska" value="" id="zabeleska_brza_naracka"><br>
+      Фирма за набавка: <br> 
+      <select id="firma_brza_naracka">
+          <?php foreach ($firmi as $firma) { ?>
+        <option value="<?php echo $firma->id?>"><?php echo $firma->name ?></option>
+          <?php } ?>
+       </select> <br> 
+      Сума за нарачаните продукти: <br> <input type="text" value="" id="suma_brza_naracka" disabled="true">  <br>    
+      <input type="text" id="displaytext">
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    <button class="btn btn-primary">Save changes</button>
+    <button id="smotano_kopce" class="btn btn-primary">Save changes</button>
   </div>
 </div>
 
 </div>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+     var spinner = $( "#kolicina_brza_naracka" ).spinner({
+      step: 0.1,
+      numberFormat: "n",
+      page: 0.1
+    });
+    spinner.spinner( "value", 0 );
+    $("#kolicina_brza_naracka").numeric();
+    
+    $(".kosnicka").click(function(){
+        $('#skrieno_pole').val($(this).attr('rel').split(",")[0]);
+        $('.ime_produkt').text($(this).attr('rel').split(",")[2]);
+        var nabavna_cena = $(this).attr('rel').split(",")[1];
+        
+        $( "#kolicina_brza_naracka" ).change(function() {
+           var suma = $( "#kolicina_brza_naracka" ).val() * nabavna_cena;
+           $("#suma_brza_naracka").val(suma);
+          });
+          
+          $( "#kolicina_brza_naracka" ).on( "spinstop", function() {
+              var suma1 = $( "#kolicina_brza_naracka" ).val() * nabavna_cena;
+                $("#suma_brza_naracka").val(suma1);
+          });
+    });
+    
+     $('#smotano_kopce').on('click', function(){
+         var url_do_akcijata =' <?php echo Yii::app()->createAbsoluteUrl("supply/brzanaracka")?>';
+            var id_produkt = $('#skrieno_pole').val();
+            var nab_kol = $( "#kolicina_brza_naracka" ).val();
+            var zabeleska = $ ("#zabeleska_brza_naracka").val();
+            var firma_id = $( "#firma_brza_naracka" ).val();
+     
+     $.post(url_do_akcijata, 
+             { id_produkt:id_produkt, 
+                 nab_kol:nab_kol, 
+                 zabeleska:zabeleska,
+                 firma_id:firma_id
+             },
+              function(data){ alert(data.status);},
+              "json");
+           
+              
+          });
+
+});
+</script>

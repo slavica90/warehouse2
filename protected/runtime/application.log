@@ -6133,3 +6133,879 @@ Stack trace:
 REQUEST_URI=/warehouse/index.php?r=site/copy&id=13
 HTTP_REFERER=http://localhost/warehouse/
 ---
+2014/07/16 13:37:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/action".' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('controller/acti...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/warehouse/index.php?r=controller/action&id=13
+HTTP_REFERER=http://localhost/warehouse/
+---
+2014/07/16 13:37:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/action".' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('controller/acti...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/warehouse/index.php?r=controller/action&id=16
+HTTP_REFERER=http://localhost/warehouse/
+---
+2014/07/17 08:40:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "copy".' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('copy')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('copy')
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/copy')
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/warehouse/index.php?r=site/copy&id=13
+HTTP_REFERER=http://localhost/warehouse/
+---
+2014/07/17 08:52:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "copy".' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('copy')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('copy')
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/copy')
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/warehouse/index.php?r=site/copy&id=13
+HTTP_REFERER=http://localhost/warehouse/
+---
+2014/07/17 08:56:42 [error] [php] Undefined variable: data (C:\wamp\www\warehouse\protected\views\site\index.php:119)
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\warehouse\protected\controllers\SiteController.php(63): SiteController->render()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): SiteController->runAction()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): SiteController->filterAccessControl()
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\warehouse\index.php(13): CWebApplication->run()
+REQUEST_URI=/warehouse/
+in C:\wamp\www\warehouse\protected\views\site\index.php (119)
+in C:\wamp\www\warehouse\protected\controllers\SiteController.php (63)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/17 09:04:23 [error] [php] Undefined variable: data (C:\wamp\www\warehouse\protected\views\site\index.php:119)
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\warehouse\protected\controllers\SiteController.php(63): SiteController->render()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): SiteController->runAction()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): SiteController->filterAccessControl()
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\warehouse\index.php(13): CWebApplication->run()
+REQUEST_URI=/warehouse/
+in C:\wamp\www\warehouse\protected\views\site\index.php (119)
+in C:\wamp\www\warehouse\protected\controllers\SiteController.php (63)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/17 09:05:21 [error] [php] Object of class Category could not be converted to string (C:\wamp\www\warehouse\protected\views\site\index.php:119)
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\warehouse\protected\controllers\SiteController.php(63): SiteController->render()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): SiteController->runAction()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): SiteController->filterAccessControl()
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\warehouse\index.php(13): CWebApplication->run()
+REQUEST_URI=/warehouse/
+in C:\wamp\www\warehouse\protected\views\site\index.php (119)
+in C:\wamp\www\warehouse\protected\controllers\SiteController.php (63)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/17 09:07:13 [error] [php] Undefined variable: model (C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CComponent.php(612) : eval()'d code:1)
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\grid\CButtonColumn.php(319): CButtonColumn->renderButton()
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\grid\CGridColumn.php(151): CButtonColumn->renderDataCellContent()
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\grid\CGridView.php(616): CButtonColumn->renderDataCell()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\grid\CGridView.php(572): CGridView->renderTableRow()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\grid\CGridView.php(482): CGridView->renderTableBody()
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\CBaseListView.php(167): CGridView->renderItems()
+#6 unknown(0): CGridView->renderSection()
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\CBaseListView.php(135): CGridView->renderContent()
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(173): CGridView->run()
+#10 C:\wamp\www\warehouse\protected\views\site\index.php(126): SiteController->widget()
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(126): require()
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): SiteController->renderFile()
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): SiteController->renderPartial()
+#15 C:\wamp\www\warehouse\protected\controllers\SiteController.php(63): SiteController->render()
+#16 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#17 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#18 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): SiteController->runAction()
+#19 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#21 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): SiteController->filterAccessControl()
+#22 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#23 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#25 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#26 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#27 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\warehouse\index.php(13): CWebApplication->run()
+REQUEST_URI=/warehouse/
+in C:\wamp\www\warehouse\protected\views\site\index.php (126)
+in C:\wamp\www\warehouse\protected\controllers\SiteController.php (63)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/17 09:10:11 [error] [php] Undefined variable: data (C:\wamp\www\warehouse\protected\views\site\index.php:119)
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\warehouse\protected\controllers\SiteController.php(63): SiteController->render()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): SiteController->runAction()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): SiteController->filterAccessControl()
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\warehouse\index.php(13): CWebApplication->run()
+REQUEST_URI=/warehouse/
+in C:\wamp\www\warehouse\protected\views\site\index.php (119)
+in C:\wamp\www\warehouse\protected\controllers\SiteController.php (63)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/17 09:16:05 [error] [php] Undefined variable: data (C:\wamp\www\warehouse\protected\views\site\index.php:119)
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\warehouse\protected\controllers\SiteController.php(63): SiteController->render()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): SiteController->runAction()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): SiteController->filterAccessControl()
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\warehouse\index.php(13): CWebApplication->run()
+REQUEST_URI=/warehouse/
+in C:\wamp\www\warehouse\protected\views\site\index.php (119)
+in C:\wamp\www\warehouse\protected\controllers\SiteController.php (63)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/17 09:18:06 [error] [php] Undefined variable: data (C:\wamp\www\warehouse\protected\views\site\index.php:119)
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\warehouse\protected\controllers\SiteController.php(63): SiteController->render()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): SiteController->runAction()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): SiteController->filterAccessControl()
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\warehouse\index.php(13): CWebApplication->run()
+REQUEST_URI=/warehouse/
+in C:\wamp\www\warehouse\protected\views\site\index.php (119)
+in C:\wamp\www\warehouse\protected\controllers\SiteController.php (63)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/17 09:18:22 [error] [php] Undefined variable: data (C:\wamp\www\warehouse\protected\views\site\index.php:119)
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\warehouse\protected\controllers\SiteController.php(63): SiteController->render()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): SiteController->runAction()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): SiteController->filterAccessControl()
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\warehouse\index.php(13): CWebApplication->run()
+REQUEST_URI=/warehouse/
+in C:\wamp\www\warehouse\protected\views\site\index.php (119)
+in C:\wamp\www\warehouse\protected\controllers\SiteController.php (63)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/17 13:00:18 [error] [php] Undefined variable: data (C:\wamp\www\warehouse\protected\views\site\index.php:119)
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\warehouse\protected\controllers\SiteController.php(63): SiteController->render()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): SiteController->runAction()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): SiteController->filterAccessControl()
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\warehouse\index.php(13): CWebApplication->run()
+REQUEST_URI=/warehouse/
+in C:\wamp\www\warehouse\protected\views\site\index.php (119)
+in C:\wamp\www\warehouse\protected\controllers\SiteController.php (63)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/17 13:08:26 [error] [php] Undefined variable: data (C:\wamp\www\warehouse\protected\views\site\index.php:119)
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\warehouse\protected\controllers\SiteController.php(63): SiteController->render()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): SiteController->runAction()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): SiteController->filterAccessControl()
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\warehouse\index.php(13): CWebApplication->run()
+REQUEST_URI=/warehouse/
+in C:\wamp\www\warehouse\protected\views\site\index.php (119)
+in C:\wamp\www\warehouse\protected\controllers\SiteController.php (63)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/17 13:20:00 [error] [exception.CException] exception 'CException' with message 'Property "CButtonColumn.0" is not defined.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\YiiBase.php(220): CComponent->__set('0', Array)
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\grid\CGridView.php(388): YiiBase::createComponent(Array, Object(CGridView))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\grid\CGridView.php(359): CGridView->initColumns()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(147): CGridView->init()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 C:\wamp\www\warehouse\protected\views\site\index.php(124): CBaseController->widget('zii.widgets.gri...', Array)
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(126): require('C:\wamp\www\war...')
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\war...', Array, true)
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\war...', Array, true)
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#10 C:\wamp\www\warehouse\protected\controllers\SiteController.php(63): CController->render('index', Array)
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('')
+#21 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#22 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/warehouse/
+HTTP_REFERER=http://localhost/warehouse/
+---
+2014/07/17 13:21:36 [error] [exception.CException] exception 'CException' with message 'Property "CButtonColumn.0" is not defined.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\YiiBase.php(220): CComponent->__set('0', Array)
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\grid\CGridView.php(388): YiiBase::createComponent(Array, Object(CGridView))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\grid\CGridView.php(359): CGridView->initColumns()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(147): CGridView->init()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 C:\wamp\www\warehouse\protected\views\site\index.php(124): CBaseController->widget('zii.widgets.gri...', Array)
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(126): require('C:\wamp\www\war...')
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\war...', Array, true)
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\war...', Array, true)
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#10 C:\wamp\www\warehouse\protected\controllers\SiteController.php(63): CController->render('index', Array)
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('')
+#21 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#22 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/warehouse/
+HTTP_REFERER=http://localhost/warehouse/
+---
+2014/07/17 13:30:37 [error] [exception.CException] exception 'CException' with message 'Property "CButtonColumn.0" is not defined.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\YiiBase.php(220): CComponent->__set('0', Array)
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\grid\CGridView.php(388): YiiBase::createComponent(Array, Object(CGridView))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\grid\CGridView.php(359): CGridView->initColumns()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(147): CGridView->init()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 C:\wamp\www\warehouse\protected\views\site\index.php(124): CBaseController->widget('zii.widgets.gri...', Array)
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(126): require('C:\wamp\www\war...')
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\war...', Array, true)
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\war...', Array, true)
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#10 C:\wamp\www\warehouse\protected\controllers\SiteController.php(63): CController->render('index', Array)
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('')
+#21 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#22 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/warehouse/
+HTTP_REFERER=http://localhost/warehouse/
+---
+2014/07/17 13:32:24 [error] [exception.CException] exception 'CException' with message 'Property "CButtonColumn.0" is not defined.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\YiiBase.php(220): CComponent->__set('0', Array)
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\grid\CGridView.php(388): YiiBase::createComponent(Array, Object(CGridView))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\grid\CGridView.php(359): CGridView->initColumns()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(147): CGridView->init()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 C:\wamp\www\warehouse\protected\views\site\index.php(128): CBaseController->widget('zii.widgets.gri...', Array)
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(126): require('C:\wamp\www\war...')
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\war...', Array, true)
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\war...', Array, true)
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#10 C:\wamp\www\warehouse\protected\controllers\SiteController.php(63): CController->render('index', Array)
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('')
+#21 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#22 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/warehouse/
+HTTP_REFERER=http://localhost/warehouse/
+---
+2014/07/17 13:32:26 [error] [exception.CException] exception 'CException' with message 'Property "CButtonColumn.0" is not defined.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\YiiBase.php(220): CComponent->__set('0', Array)
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\grid\CGridView.php(388): YiiBase::createComponent(Array, Object(CGridView))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\grid\CGridView.php(359): CGridView->initColumns()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(147): CGridView->init()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 C:\wamp\www\warehouse\protected\views\site\index.php(128): CBaseController->widget('zii.widgets.gri...', Array)
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(126): require('C:\wamp\www\war...')
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\war...', Array, true)
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\war...', Array, true)
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#10 C:\wamp\www\warehouse\protected\controllers\SiteController.php(63): CController->render('index', Array)
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('')
+#21 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#22 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/warehouse/
+HTTP_REFERER=http://localhost/warehouse/
+---
+2014/07/17 13:36:13 [error] [exception.CException] exception 'CException' with message 'Either "name" or "value" must be specified for CDataColumn.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\grid\CDataColumn.php:84
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\grid\CGridView.php(401): CDataColumn->init()
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\grid\CGridView.php(359): CGridView->initColumns()
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(147): CGridView->init()
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 C:\wamp\www\warehouse\protected\views\site\index.php(133): CBaseController->widget('zii.widgets.gri...', Array)
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(126): require('C:\wamp\www\war...')
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\war...', Array, true)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\war...', Array, true)
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#9 C:\wamp\www\warehouse\protected\controllers\SiteController.php(63): CController->render('index', Array)
+#10 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('')
+#20 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#21 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/warehouse/
+HTTP_REFERER=http://localhost/warehouse/
+---
+2014/07/17 14:40:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/warehouse/index.php?r=site/view&id=13
+HTTP_REFERER=http://localhost/warehouse/
+---
+2014/07/17 14:40:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/warehouse/index.php?r=site/view&id=13
+HTTP_REFERER=http://localhost/warehouse/
+---
+2014/07/17 14:40:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "update".' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('update')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('update')
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/update')
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/warehouse/index.php?r=site/update&id=13
+HTTP_REFERER=http://localhost/warehouse/
+---
+2014/07/21 15:28:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:28:35 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:29:37 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:29:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:29:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:29:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:39:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:40:01 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:40:02 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:42:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:43:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:43:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:43:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:43:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:43:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:43:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:43:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:43:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:43:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:43:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:44:11 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:44:12 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
+2014/07/21 15:44:13 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('brzanaracka')
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('supply/brzanara...')
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
+---
