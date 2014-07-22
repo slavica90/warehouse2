@@ -28,7 +28,7 @@ class SupplyController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view', 'brzanaracka'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -189,6 +189,56 @@ class SupplyController extends Controller
         */
         public function actionBrzanaracka()
 	{
+            $model=new Supply;
+       
+               // $baseUrl = Yii::app()->baseUrl; 
+              //  $cs = Yii::app()->getClientScript();
+               // $cs->registerScriptFile($baseUrl.'/js/jquery-mousewheel-master/jquery.mousewheel.js');
+              //  $cs->registerScriptFile($baseUrl.'/js/numeric/jquery.numeric.js');
+              //  Yii::app()->clientScript->registerCoreScript('jquery.ui');
+                //$cs->registerScriptFile($baseUrl.'/js/jquery-number-master/jquery.number.js');
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+                 if(isset($_POST["id_produkt"])&&isset($_POST["nab_kol"])&&isset($_POST["zabeleska"])&&isset($_POST["firma_id"]))
+                {
+                        $pr_id=$_POST["id_produkt"];
+                        $nabavena_kolicina = $_POST["nab_kol"];
+                        $zabeleska_naracka = $_POST["zabeleska"];
+                        $firmaid = $_POST["firma_id"];
+                        
+                        $product = Product::model()->findByPk($pr_id);
+                      
+                            $model->product_id = $pr_id;
+                            $model->bought_products = $nabavena_kolicina;
+                            $model->comment = $zabeleska_naracka;
+                            $model->firma_id = $firmaid;
+                            
+                           // $model->attributes=$_POST['Supply'];
+                            $bought=(float) $nabavena_kolicina;
+                            $total=(float) $product->amount;
+                            $result = $total+$bought;
+                            $product->amount = (string)$result;
+                            if($result < $product->warning_amount ){ // moze da ima nabavka na produkt ama pak da nad granicnata vrednost
+                                   $product->instock = 0; 
+                             }
+                             else {
+                                 $product->instock = 1; 
+                             }
+                            
+                            $product->save() ;
+                            $model->save();
+                           echo json_encode(array("status"=>"Uspesno kreirana naracka"));
+                            Yii::app()->end();
+                            
+                }
+                else {      
+                      echo json_encode(array("status"=>"Ne moze da se kreira narackata"));
+                        Yii::app()->end();
+                }
+                
+             
+            
 //             if (isset($_POST["prv"])&&isset($_POST["op"])&&isset($_POST["vtor"])){
 //                 $productid = $_POST["id_produkt"];
 //                 $nabavena_kolicina = $_POST["nab_kol"];
@@ -197,8 +247,7 @@ class SupplyController extends Controller
             //    $rezultat = "0";
              
               
-            echo json_encode(array("status"=>"TEST"));
-             Yii::app()->end();
+          
    
 //            }
 

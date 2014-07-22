@@ -142,10 +142,10 @@ $this->widget('zii.widgets.grid.CGridView', array(
           <?php } ?>
        </select> <br> 
       Сума за нарачаните продукти: <br> <input type="text" value="" id="suma_brza_naracka" disabled="true">  <br>    
-      <input type="text" id="displaytext">
+      <div id="info_status"></div>
   </div>
   <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button id="zatvori_kopce" class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
     <button id="smotano_kopce" class="btn btn-primary">Save changes</button>
   </div>
 </div>
@@ -192,11 +192,16 @@ $(document).ready(function(){
                  zabeleska:zabeleska,
                  firma_id:firma_id
              },
-              function(data){ alert(data.status);},
+              function(data){ $("#info_status").text(data.status);
+              },
               "json");
            
               
           });
+          
+           $('#smotano_kopce').on('click', function(){
+            $.fn.yiiGridView.update("yw0");
+             });
 
 });
 </script>
