@@ -203,5 +203,35 @@ class Product extends CActiveRecord
             $pom = Yii::app()->getBaseUrl(true);
             $product = Product::model()->findByPk($idproduct);
             return $pom.'/images/upload/productphotos/'.$idproduct.'/'.$product->image_url;    
-        }      
+        }  
+        
+        public function searchnarachka()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+                
+		$criteria->compare('id',$this->id,true);
+		$criteria->compare('name',$this->name,true);
+		$criteria->compare('code',$this->code,true);
+		$criteria->compare('purchase_price',$this->purchase_price);
+		$criteria->compare('sell_price',$this->sell_price);
+		$criteria->compare('amount',$this->amount);
+		$criteria->compare('measurement',$this->measurement,true);
+		$criteria->compare('date_create',$this->date_create,true);
+		$criteria->compare('date_update',$this->date_update,true);
+		$criteria->compare('date_out',$this->date_out,true);
+		$criteria->compare('date_in',$this->date_in,true);
+		$criteria->compare('firma_id',$this->firma_id,true);
+		$criteria->compare('image_url',$this->image_url,true);
+		$criteria->compare('instock',$this->instock);
+		$criteria->compare('user_id',$this->user_id);
+                $criteria->compare('warning_amount',$this->warning_amount);
+                
+                $criteria->addCondition("instock = 0 ");
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
  }

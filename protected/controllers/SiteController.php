@@ -53,6 +53,7 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
+           
             $baseUrl = Yii::app()->baseUrl; 
                 $cs = Yii::app()->getClientScript();
                 $cs->registerScriptFile($baseUrl.'/js/jquery-mousewheel-master/jquery.mousewheel.js');
@@ -60,7 +61,7 @@ class SiteController extends Controller
                 Yii::app()->clientScript->registerCoreScript('jquery.ui');
             
             $kategorii=Category::model()->findAll(); // Array od Category objekti 
-            $produkti=Product::model()->findAll(array("condition"=>"instock = 0")); // Array od Product objekti kaj koj amount<3
+            $produkti=new Product('searchnarachka');
             $firmi = Firma::model()->findAll();
             $model=new Category;
             $this->render('index',array(

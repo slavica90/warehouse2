@@ -75,7 +75,8 @@ $this->pageTitle=Yii::app()->name;
 <?php $dataProvider=new CActiveDataProvider('Product');
 
 $this->widget('zii.widgets.grid.CGridView', array(
-    'dataProvider' => $dataProvider,
+    'dataProvider' => $produkti->searchnarachka(),
+     'id' => 'gridid',
     'columns'=>array(
 		array(
                     'header' => 'Ред.бр.',
@@ -200,7 +201,7 @@ $(document).ready(function(){
           });
           
            $('#smotano_kopce').on('click', function(){
-            $.fn.yiiGridView.update("yw0");
+            $.fn.yiiGridView.update("gridid");
              });
 
 });

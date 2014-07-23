@@ -7009,3 +7009,81 @@ Stack trace:
 REQUEST_URI=/warehouse/index.php?r=supply/brzanaracka
 HTTP_REFERER=http://localhost/warehouse/index.php?r=site/index
 ---
+2014/07/23 15:27:40 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 0' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `product` `t` WHERE instock == 0 .
+in C:\wamp\www\warehouse\protected\views\site\index.php (125)
+in C:\wamp\www\warehouse\protected\controllers\SiteController.php (72)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/23 15:27:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 0' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `product` `t` WHERE instock == 0 ' in C:\wamp\www\yii-1.1.14.f0fee9\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(147): CGridView->init()
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#10 C:\wamp\www\warehouse\protected\views\site\index.php(125): CBaseController->widget('zii.widgets.gri...', Array)
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(126): require('C:\wamp\www\war...')
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\war...', Array, true)
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\war...', Array, true)
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\warehouse\protected\controllers\SiteController.php(72): CController->render('index', Array)
+#16 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#17 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('index')
+#26 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#27 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/warehouse/index.php?r=site/index
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/login
+---
+2014/07/23 15:28:06 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '0'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `product` `t` WHERE instock == '0' .
+in C:\wamp\www\warehouse\protected\views\site\index.php (125)
+in C:\wamp\www\warehouse\protected\controllers\SiteController.php (72)
+in C:\wamp\www\warehouse\index.php (13)
+2014/07/23 15:28:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '0'' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `product` `t` WHERE instock == '0' ' in C:\wamp\www\yii-1.1.14.f0fee9\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii-1.1.14.f0fee9\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii-1.1.14.f0fee9\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 C:\wamp\www\yii-1.1.14.f0fee9\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(147): CGridView->init()
+#9 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#10 C:\wamp\www\warehouse\protected\views\site\index.php(125): CBaseController->widget('zii.widgets.gri...', Array)
+#11 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(126): require('C:\wamp\www\war...')
+#12 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\war...', Array, true)
+#13 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\war...', Array, true)
+#14 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\warehouse\protected\controllers\SiteController.php(72): CController->render('index', Array)
+#16 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#17 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('index')
+#26 C:\wamp\www\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#27 C:\wamp\www\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\warehouse\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/warehouse/index.php?r=site/index
+HTTP_REFERER=http://localhost/warehouse/index.php?r=site/login
+---
